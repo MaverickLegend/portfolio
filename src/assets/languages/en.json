@@ -1,0 +1,37 @@
+{
+    "presentation": {
+        "hello": "Hello, i am",
+        "name": "Cristián Rojas",
+        "alias": "MaverickLegend",
+        "webdeveloper": "Front-end web developer",
+        "certificates-title": "Certificates",
+        "certificates":
+        [
+            {
+                "title": "Sence",
+                "description": "Sence certified through the Talento Digital para Chile program as a FrontEnd developer specialized in the Vue.js framework",
+                "link": "../../../public/assets/files/Sence Certificate.pdf"
+            },
+            {
+                "title": "Ef SET",
+                "description": "Ef SET C2 English Certificate",
+                "link": "../../../public/assets/files/EF SET Certificate.pdf"
+            }
+
+        ]
+    },
+    "about": {
+        "title": "About me",
+        "description": "Programming and Systems Analysis graduate, looking for my first professional opportunity in web applications and software development. I am very passionate about technology and programming, and I'm always looking forward to deepen my knowledge and improve my skills. I love working in teams and mutual support to achieve common goals. I also work as a Sound Technician oriented to sound reinforcement, so I have very sharpened skills towards problem solving under dynamic situations."
+    },
+    "settings": {
+        "darkmode": "Dark mode",
+        "lightmode": "Light mode",
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "skills": {
+        "title": "Skills"
+    }
+
+}
