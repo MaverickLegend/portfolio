@@ -1,0 +1,66 @@
+// Define font sizes
+$font-size-small: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-medium: 1.25rem; // 20px
+$font-size-large: 1.5rem; // 24px
+$font-size-xlarge: 2rem; // 32px
+$font-size-xxlarge: 3rem; // 48px
+
+// Define color palette
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray-light: #f5f5f5;
+$color-gray-dark: #333333;
+$color-primary: #3498db; // Example primary color
+$color-secondary: #2ecc71; // Example secondary color
+
+// Font size classes
+.font-small {
+    font-size: $font-size-small;
+}
+
+.font-base {
+    font-size: $font-size-base;
+}
+
+.font-medium {
+    font-size: $font-size-medium;
+}
+
+.font-large {
+    font-size: $font-size-large;
+}
+
+.font-xlarge {
+    font-size: $font-size-xlarge;
+}
+
+.font-xxlarge {
+    font-size: $font-size-xxlarge;
+}
+
+// Color classes for white background
+.text-primary-white {
+    color: $color-primary;
+}
+
+.text-secondary-white {
+    color: $color-secondary;
+}
+
+.text-gray-dark-white {
+    color: $color-gray-dark;
+}
+
+// Color classes for black background
+.text-primary-black {
+    color: $color-primary;
+}
+
+.text-secondary-black {
+    color: $color-secondary;
+}
+
+.text-gray-light-black {
+    color: $color-gray-light;
+}

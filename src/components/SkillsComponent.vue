@@ -43,10 +43,13 @@ const skills: Skill[] = [
 .skills-container {
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    align-items: center;
+    width: 100%;
 
     .skills {
         display: flex;
+        width: 60%;
+        align-items: center;
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: center;

@@ -39,10 +39,10 @@ interface Icon {
 }
 
 const icons: Icon[] = [
-    { name: 'Github', icon: 'github fa-brands fa-github fa-2xl', link: 'https://github.com/MaverickLegend' },
-    { name: 'Gmail', icon: 'gmail fa-solid fa-square-envelope fa-2xl', link: 'mailto:malcolmrojas.f@gmail.com' },
-    { name: 'LinkedIn', icon: 'fa-brands fa-linkedin fa-2xl', link: 'https://www.linkedin.com/in/malcolmrojas/' },
-    { name: 'CV', icon: 'fa-solid fa-file-pdf fa-2xl', link: '../../public/assets/files/CV Cristian Rojas 2024.pdf' },
+    { name: 'Github', icon: 'github fa-brands fa-github fa-xl', link: 'https://github.com/MaverickLegend' },
+    { name: 'Gmail', icon: 'gmail fa-solid fa-square-envelope fa-xl', link: 'mailto:malcolmrojas.f@gmail.com' },
+    { name: 'LinkedIn', icon: 'fa-brands fa-linkedin fa-xl', link: 'https://www.linkedin.com/in/malcolmrojas/' },
+    { name: 'CV', icon: 'fa-solid fa-file-pdf fa-xl', link: '../../public/assets/files/CV Cristian Rojas 2024.pdf' },
 ];
 </script>
 
@@ -50,27 +50,24 @@ const icons: Icon[] = [
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: aliceblue;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    z-index: 1;
+    justify-content: space-between;
+    padding-left: 1rem;
 
     .icon {
-        color: #3ea078;
         transition: ease-in-out 0.5s;
 
         a {
-            color: #3ea078;
+            color: black;
             text-decoration: none;
+            padding-right: 2rem;
 
             i {
-                font-size: 2.5rem;
-                padding: 0 0.5rem;
+                font-size: 2rem;
                 transition: ease-in-out 0.5s;
 
                 &:hover {
                     transform: rotate(360deg);
+                    scale: 1.2;
                 }
             }
         }
@@ -104,7 +101,7 @@ const icons: Icon[] = [
     .toggle-switch-container {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 1rem;
         justify-content: center;
         transition: ease-in-out 0.3s;
 
@@ -119,8 +116,8 @@ const icons: Icon[] = [
 
         .toggle-switch {
             position: relative;
-            width: 60px;
-            height: 34px;
+            width: 2rem;
+            height: 1rem;
 
             input {
                 opacity: 0;
@@ -135,17 +132,15 @@ const icons: Icon[] = [
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: #3ea078;
+                background-color: black;
                 transition: 0.4s;
                 border-radius: 34px;
 
                 &:before {
                     position: absolute;
                     content: "";
-                    height: 26px;
-                    width: 26px;
-                    left: 4px;
-                    bottom: 4px;
+                    height: 1rem;
+                    width: 1rem;
                     background-color: white;
                     transition: 0.4s;
                     border-radius: 50%;
@@ -157,7 +152,7 @@ const icons: Icon[] = [
             }
 
             input:checked+.slider:before {
-                transform: translateX(26px);
+                transform: translateX(1rem);
             }
         }
     }

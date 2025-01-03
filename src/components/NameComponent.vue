@@ -26,6 +26,7 @@ const languageKey = computed(() => store.btnLang);
 
 <style lang="scss" scoped>
 @import '../../src/assets/styles/transitions.scss';
+@import '../../src/assets/styles/fonts.scss';
 
 .presentation-container {
     display: flex;
@@ -33,8 +34,7 @@ const languageKey = computed(() => store.btnLang);
     justify-content: space-evenly;
     background-color: #104660;
     padding-top: 1rem;
-    border-radius: 0.5rem;
-    color: aliceblue;
+    border-radius: 0.3rem;
     text-align: center;
 
     .name-container {
@@ -43,13 +43,16 @@ const languageKey = computed(() => store.btnLang);
         justify-content: center;
         align-items: flex-end;
 
-        h2 {
-            font-size: 2rem;
-        }
-
         h1 {
             font-size: 4rem;
+            color: $color-white;
         }
+
+        h2 {
+            font-size: 2rem;
+            color: $color-gray-light;
+        }
+
     }
 
     .alias-container {
@@ -59,6 +62,7 @@ const languageKey = computed(() => store.btnLang);
 
         h3 {
             font-size: 1.5rem;
+            color: $color-gray-light;
         }
 
         span {

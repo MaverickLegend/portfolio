@@ -1,6 +1,8 @@
 <template>
     <div class="logo-container">
-        <div class="logo"></div>
+        <router-link to="/">
+            <div class="logo"></div>
+        </router-link>
     </div>
 </template>
 
@@ -11,8 +13,8 @@
 <style scoped lang="scss">
 .logo-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-left: 1rem;
 
 
     .logo {
@@ -20,8 +22,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 12rem;
-        height: 12rem;
+        width: 20rem;
+        height: 20rem;
     }
 }
 </style>

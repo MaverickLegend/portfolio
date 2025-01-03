@@ -1,7 +1,7 @@
 <template>
     <transition name="swipe">
         <div class="about-container" :key="languageKey">
-            <h1>{{ about.title }}</h1>
+            <h1>{{ about.title.toUpperCase() }}</h1>
             <p>{{ about.description }}</p>
         </div>
     </transition>
@@ -24,8 +24,7 @@ const languageKey = computed(() => store.btnLang);
 .about-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -35,11 +34,16 @@ const languageKey = computed(() => store.btnLang);
     color: white;
 
     h1 {
-        font-size: 2rem;
+        align-self: baseline;
+        font-size: 6rem;
+        padding: 2rem;
+        letter-spacing: 0.1rem;
+        font-weight: lighter;
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        padding: 2rem;
     }
 }
 </style>
