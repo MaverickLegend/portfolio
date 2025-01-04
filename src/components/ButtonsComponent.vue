@@ -49,9 +49,13 @@ const icons: Icon[] = [
 <style scoped lang="scss">
 .container {
     display: flex;
+    background-color: aliceblue;
     align-items: center;
     justify-content: space-between;
     padding-left: 1rem;
+    border-bottom: solid 1px black;
+
+    height: 5rem;
 
     .icon {
         transition: ease-in-out 0.5s;
@@ -104,6 +108,7 @@ const icons: Icon[] = [
         gap: 1rem;
         justify-content: center;
         transition: ease-in-out 0.3s;
+        padding-right: 2rem;
 
         :hover {
             transform: scale(1.05);

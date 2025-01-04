@@ -1,24 +1,12 @@
 <script setup lang="ts">
-import AboutComponent from './components/AboutComponent.vue'
-import ButtonsComponent from './components/ButtonsComponent.vue';
-import CertificatesContainer from './components/CertificatesContainer.vue';
-import LogoComponent from './components/LogoComponent.vue';
-import MainContainer from './components/MainContainer.vue';
-import NameComponent from './components/NameComponent.vue';
-import SkillComponent from './components/SkillsComponent.vue';
+import MainComponent from './components/MainComponent.vue';
 
 </script>
 
 <template>
   <div id="app">
     <main>
-      <MainContainer class="main" />
-      <!-- <ButtonsComponent class="buttons" />
-      <NameComponent class="name" />
-      <LogoComponent class="logo" />
-      <CertificatesContainer class="certificates" />
-      <AboutComponent class="about" />
-      <SkillComponent class="skills" /> -->
+      <MainComponent class="main" />
     </main>
   </div>
 </template>

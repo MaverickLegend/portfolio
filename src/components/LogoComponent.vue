@@ -14,6 +14,7 @@
 .logo-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-left: 1rem;
 
 
@@ -22,8 +23,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 15rem;
     }
 }
 </style>

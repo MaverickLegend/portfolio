@@ -1,22 +1,22 @@
 import { defineStore } from "pinia";
-import es from "../assets/languages/es.json";
-import en from "../assets/languages/en.json";
+import { languages } from "../assets/languages/data.json";
 
 export const useLanguageStore = defineStore("language", {
   state: () => ({
-    language: es, // Estado inicial en español
-    btnLang: "es", // Estado inicial del botón en español
+    language: languages.spanish,
+    btnLang: languages.spanish.code, // Estado inicial en español
   }),
+
   actions: {
     handleLanguage(lang: string) {
       switch (lang) {
         case "es":
-          this.language = es;
-          this.btnLang = "es";
+          this.language = languages.spanish;
+          this.btnLang = languages.spanish.code;
           break;
         case "en":
-          this.language = en;
-          this.btnLang = "en";
+          this.language = languages.english;
+          this.btnLang = languages.english.code;
           break;
       }
     },

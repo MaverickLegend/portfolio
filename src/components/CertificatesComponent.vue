@@ -1,7 +1,6 @@
 <template>
     <transition name="swipe">
         <div class="certificates-container" :key="languageKey">
-            <h2>{{ certificateTitle }}</h2>
             <div class="certificates">
                 <div v-for="certificate in certificates" :key="certificate.title" class="certificate">
                     <!-- <img :src="certificate.image" :alt="certificate.title" /> -->
@@ -18,7 +17,6 @@ import { useLanguageStore } from '../stores/useLanguageStore';
 import { computed } from 'vue';
 
 const store = useLanguageStore();
-const certificateTitle = computed(() => store.language.presentation['certificates-title']);
 const certificates = computed(() => store.language.presentation.certificates);
 const languageKey = computed(() => store.btnLang);
 

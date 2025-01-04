@@ -1,0 +1,124 @@
+{
+  "languages": {
+    "english": {
+      "id": 1,
+      "name": "English",
+      "code": "en",
+      "icon": "us",
+      "presentation": {
+        "hello": "Hello, i am",
+        "name": "Cristián Rojas",
+        "alias": "MaverickLegend",
+        "webdeveloper": "Front-end web developer",
+        "certificates-title": "Certificates",
+        "certificates": [
+          {
+            "title": "Sence",
+            "description": "Sence certified through the Talento Digital para Chile program as a FrontEnd developer specialized in the Vue.js framework",
+            "link": "../../../public/assets/files/Sence Certificate.pdf"
+          },
+          {
+            "title": "Ef SET",
+            "description": "Ef SET C2 English Certificate",
+            "link": "../../../public/assets/files/EF SET Certificate.pdf"
+          }
+        ]
+      },
+      "about": {
+        "title": "About me",
+        "description": "Programming and Systems Analysis graduate, looking for my first professional opportunity in web applications and software development. I am very passionate about technology and programming, and I'm always looking forward to deepen my knowledge and improve my skills. I love working in teams and mutual support to achieve common goals. I also work as a Sound Technician oriented to sound reinforcement, so I have very sharpened skills towards problem solving under dynamic situations."
+      },
+      "settings": {
+        "darkmode": "Dark mode",
+        "lightmode": "Light mode",
+        "english": "English",
+        "spanish": "Spanish"
+      },
+      "skills": {
+        "title": "Skills"
+      },
+      "sections": [
+        {
+          "id": 1,
+          "name": "Projects",
+          "url": "/projects"
+        },
+        {
+          "id": 2,
+          "name": "About",
+          "url": "/about"
+        },
+        {
+          "id": 3,
+          "name": "Certificates",
+          "url": "/certificates"
+        },
+        {
+          "id": 4,
+          "name": "Contact",
+          "url": "/contact"
+        }
+      ]
+    },
+    "spanish": {
+      "id": 2,
+      "name": "Español",
+      "code": "es",
+      "icon": "es",
+      "presentation": {
+        "hello": "Hola, soy",
+        "name": "Cristián Rojas",
+        "alias": "MaverickLegend",
+        "webdeveloper": "Desarrollador web Front-end",
+        "certificates-title": "Certificados",
+        "certificates": [
+          {
+            "title": "Sence",
+            "description": "Certificado Sence a través del programa Talento Digital para Chile como desarrollador FrontEnd especializado en el framework Vue.js",
+            "link": "../../../public/assets/files/Sence Certificate.pdf"
+          },
+          {
+            "title": "Ef SET",
+            "description": "Certificado de Inglés Ef SET C2",
+            "link": "../../../public/assets/files/EF SET Certificate.pdf"
+          }
+        ]
+      },
+      "about": {
+        "title": "Sobre mí",
+        "description": "Técnico en Programación y Análisis de Sistemas, en busca de mi primera oportunidad profesional en aplicaciones web y desarrollo de software. Soy muy apasionado por la tecnología y la programación, y siempre estoy buscando profundizar mis conocimientos y mejorar mis habilidades. Me encanta trabajar en equipos y apoyo mutuo para lograr objetivos comunes. También trabajo como Técnico en Sonido orientado a la amplificación sonora, por lo que tengo habilidades muy afiladas para resolver problemas bajo situaciones dinámicas."
+      },
+      "settings": {
+        "darkmode": "Modo oscuro",
+        "lightmode": "Modo claro",
+        "english": "Inglés",
+        "spanish": "Español"
+      },
+      "skills": {
+        "title": "Habilidades"
+      },
+      "sections": [
+        {
+          "id": 1,
+          "name": "Proyectos",
+          "url": "/projects"
+        },
+        {
+          "id": 2,
+          "name": "Sobre mí",
+          "url": "/about"
+        },
+        {
+          "id": 3,
+          "name": "Certificados",
+          "url": "/certificates"
+        },
+        {
+          "id": 4,
+          "name": "Contacto",
+          "url": "/contact"
+        }
+      ]
+    }
+  }
+}
