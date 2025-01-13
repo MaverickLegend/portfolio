@@ -9,4 +9,7 @@ const app = createApp(App);
 app.use(router);
 app.use(createPinia());
 
+const theme = localStorage.getItem("theme") || "light";
+document.documentElement.setAttribute("data-theme", theme);
+
 app.mount("#app");

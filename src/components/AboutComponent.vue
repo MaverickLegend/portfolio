@@ -28,22 +28,25 @@ const languageKey = computed(() => store.btnLang);
     gap: 1rem;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: #104660;
     padding: 1rem;
     border-radius: 0.5rem;
-    color: white;
+    color: var(--text);
 
     h1 {
         align-self: baseline;
-        font-size: 6rem;
-        padding: 2rem;
-        letter-spacing: 0.1rem;
-        font-weight: lighter;
+        font-family: var(--font-main);
+        font-size: var(--text-4xl);
+        font-weight: var(--font-bold);
+        letter-spacing: var(--tracking-tight);
+        color: var(--accent-blue);
+        padding: 1rem;
     }
 
     p {
-        font-size: 1.5rem;
-        padding: 2rem;
+        font-family: var(--font-secondary);
+        font-size: var(--text-lg);
+        line-height: var(--leading-relaxed);
+        padding: 1rem;
     }
 }
 </style>

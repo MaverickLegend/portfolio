@@ -1,4 +1,4 @@
-@import './fonts.scss';
+@import '../styles/fonts.scss';
 
 * {
     margin: 0;
@@ -7,5 +7,17 @@
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-} 
+    font-family: var(--font-secondary);
+    color: var(--text);
+    background-color: var(--primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--text);
+}
+
+p {
+    font-family: var(--font-secondary);
+    color: var(--text);
+}

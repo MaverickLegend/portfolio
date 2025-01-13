@@ -3,6 +3,11 @@
         <div class="home">
             <transition name="swipe" mode="out-in">
                 <div class="content" :key="languageKey">
+                    <!-- <router-view v-slot="{ Component }">
+                        <transition name="fade-slide" mode="in-out">
+                            <component :is="Component" />
+                        </transition>
+                    </router-view> -->
                     <transition name="fade-slide" mode="in-out">
                         <RouterView />
                     </transition>
@@ -10,17 +15,18 @@
             </transition>
             <SkillsComponent />
         </div>
-        <div class="sidebar">
+        <aside class="sidebar">
             <ButtonsComponent />
             <transition name="disolve" mode="out-in">
                 <div class="nav" :key="languageKey">
-                    <router-link v-for="(section, index) in sections" :key="index" :to=section.url class="link"> {{
-                        section.name }}
+                    <router-link v-for="(section, index) in sections" :key="index" :to=section.url class="link"
+                        active-class="active"> {{
+                            section.name }}
                     </router-link>
                 </div>
             </transition>
             <LogoComponent />
-        </div>
+        </aside>
     </div>
 </template>
 <script setup lang="ts">
@@ -39,6 +45,7 @@ const sections = computed(() => language.value.sections);
 
 <style scoped lang="scss">
 @import "../assets/styles/transitions.scss";
+@import "../assets/styles/themes.scss";
 
 .wrapper {
     display: grid;
@@ -57,19 +64,21 @@ const sections = computed(() => language.value.sections);
         .content {
             padding: 1rem;
             border-radius: 0.3rem;
-            background-color: #104660;
-            color: white;
+            place-content: center;
+            background-color: var(--primary);
+            border: solid 1px var(--shadow);
+            box-shadow: var(--shadow);
         }
     }
 
     .sidebar {
-        background-color: aliceblue;
         border-radius: 0.3rem;
-        color: black;
         padding: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        box-shadow: var(--shadow);
+        background-color: var(--primary);
 
         .nav {
             display: flex;
@@ -78,30 +87,26 @@ const sections = computed(() => language.value.sections);
             padding: 4rem 1rem;
 
             .link {
-                color: black;
-                font-size: 2rem;
-                transition: ease-in-out 0.3s;
+                font-family: var(--font-main);
+                color: var(--text);
+                font-size: var(--text-2xl);
+                font-weight: var(--font-medium);
+                text-decoration: none;
+                transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, letter-spacing ease-in-out 0.3s;
 
                 &:hover {
                     transform-origin: left;
-                    transform: scale(1.2);
-                    color: #3ea078;
-                    letter-spacing: 0.4rem;
-
+                    color: var(--accent-teal);
+                    letter-spacing: var(--tracking-wider);
                 }
-            }
 
-            a {
-                text-decoration: none;
-                font-size: 1.5rem;
-                transition: ease-in-out 0.5s;
-
-                &:hover {
-                    color: #3ea078;
+                &.active {
+                    color: var(--accent-teal);
+                    font-weight: var(--font-semibold);
+                    letter-spacing: var(--tracking-wider);
                 }
             }
         }
     }
-
 }
 </style>

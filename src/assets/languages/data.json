@@ -10,17 +10,18 @@
         "name": "Cristián Rojas",
         "alias": "MaverickLegend",
         "webdeveloper": "Front-end web developer",
-        "certificates-title": "Certificates",
         "certificates": [
           {
             "title": "Sence",
             "description": "Sence certified through the Talento Digital para Chile program as a FrontEnd developer specialized in the Vue.js framework",
-            "link": "../../../public/assets/files/Sence Certificate.pdf"
+            "link": "../../../public/assets/files/Sence Certificate.pdf",
+            "image": "../../../public/assets/files/sence.png"
           },
           {
             "title": "Ef SET",
             "description": "Ef SET C2 English Certificate",
-            "link": "../../../public/assets/files/EF SET Certificate.pdf"
+            "link": "../../../public/assets/files/EF SET Certificate.pdf",
+            "image": "../../../public/assets/files/efset.png"
           }
         ]
       },
@@ -70,17 +71,18 @@
         "name": "Cristián Rojas",
         "alias": "MaverickLegend",
         "webdeveloper": "Desarrollador web Front-end",
-        "certificates-title": "Certificados",
         "certificates": [
           {
             "title": "Sence",
             "description": "Certificado Sence a través del programa Talento Digital para Chile como desarrollador FrontEnd especializado en el framework Vue.js",
-            "link": "../../../public/assets/files/Sence Certificate.pdf"
+            "link": "../../../public/assets/files/Sence Certificate.pdf",
+            "image": "../../../public/assets/files/sence.png"
           },
           {
             "title": "Ef SET",
             "description": "Certificado de Inglés Ef SET C2",
-            "link": "../../../public/assets/files/EF SET Certificate.pdf"
+            "link": "../../../public/assets/files/EF SET Certificate.pdf",
+            "image": "../../../public/assets/files/efset.png"
           }
         ]
       },

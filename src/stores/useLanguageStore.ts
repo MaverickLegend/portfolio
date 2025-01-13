@@ -9,16 +9,21 @@ export const useLanguageStore = defineStore("language", {
 
   actions: {
     handleLanguage(lang: string) {
-      switch (lang) {
-        case "es":
-          this.language = languages.spanish;
-          this.btnLang = languages.spanish.code;
-          break;
-        case "en":
-          this.language = languages.english;
-          this.btnLang = languages.english.code;
-          break;
-      }
+      lang === "es" ? this.setLanguage(languages.spanish) : this.setLanguage(languages.english);
+      // switch (lang) {
+      //   case "es":
+      //     this.language = languages.spanish;
+      //     this.btnLang = languages.spanish.code;
+      //     break;
+      //   case "en":
+      //     this.language = languages.english;
+      //     this.btnLang = languages.english.code;
+      //     break;
+      // }
+    },
+    setLanguage(language: typeof languages.spanish | typeof languages.english) {
+      this.language = language;
+      this.btnLang = language.code;
     },
   },
 });

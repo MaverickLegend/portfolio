@@ -32,7 +32,6 @@ const languageKey = computed(() => store.btnLang);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #104660;
     padding-top: 1rem;
     border-radius: 0.3rem;
     text-align: center;

@@ -19,12 +19,13 @@
 
 
     .logo {
-        background-image: url('../../public/assets/files/wizard_logo2.png');
+        background-image: url('../assets/img/wizard_logo2.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 15rem;
         height: 15rem;
     }
+
 }
 </style>

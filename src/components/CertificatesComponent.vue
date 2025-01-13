@@ -3,8 +3,8 @@
         <div class="certificates-container" :key="languageKey">
             <div class="certificates">
                 <div v-for="certificate in certificates" :key="certificate.title" class="certificate">
-                    <!-- <img :src="certificate.image" :alt="certificate.title" /> -->
                     <h3>{{ certificate.title }}</h3>
+                    <img :src="certificate.image" :alt="certificate.title" />
                     <h4>{{ certificate.description }}</h4>
                 </div>
             </div>
@@ -26,43 +26,45 @@ const languageKey = computed(() => store.btnLang);
 @import '../../src/assets/styles/transitions.scss';
 
 .certificates-container {
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: aliceblue;
-
-    h2 {
-        font-size: 2rem;
-        color: #104660;
-        text-align: center;
-    }
+    color: var(--text);
 
     .certificates {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        gap: 2rem;
 
         .certificate {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1rem;
+            justify-content: space-around;
+            height: 30rem;
             border-radius: 0.5rem;
-            background-color: #104660;
-            color: aliceblue;
-            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
             h3 {
                 font-size: 1.5rem;
+                text-align: center;
+                color: var(--text);
             }
 
             h4 {
                 font-size: 1rem;
+                text-align: center;
+                color: #666;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 70%;
+                object-fit: cover;
+                border-radius: 0.3rem;
             }
         }
     }

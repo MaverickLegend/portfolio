@@ -1,5 +1,10 @@
 <template>
     <div class="skills-container">
+        <transition name="disolve" mode="out-in">
+            <div class="title" :key="languageKey">
+                <h1>{{ skillsTitle }}</h1>
+            </div>
+        </transition>
         <div class="skills">
             <div v-for="skill in skills" :key="skill.name" :title="skill.name">
                 <Icon :icon="skill.icon" class="skill"></Icon>
@@ -10,12 +15,20 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
+import { useLanguageStore } from '../stores/useLanguageStore';
+import { computed } from 'vue';
+
 
 interface Skill {
     name: string;
     color: string;
     icon: string;
 }
+
+const store = useLanguageStore();
+const language = computed(() => store.language);
+const skillsTitle = computed(() => language.value.skills.title);
+const languageKey = computed(() => store.btnLang);
 
 const skills: Skill[] = [
     { name: 'JavaScript', color: '#F7DF1E', icon: 'skill-icons:javascript' },
@@ -42,9 +55,21 @@ const skills: Skill[] = [
 <style scoped lang="scss">
 .skills-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-color: var(--primary);
+    border-radius: 0.3rem;
+
+    h1 {
+        padding-bottom: 1.5rem;
+        font-family: var(--font-main);
+        font-size: var(--text-4xl);
+        font-weight: var(--font-bold);
+        letter-spacing: var(--tracking-tight);
+        color: var(--accent-blue);
+    }
 
     .skills {
         display: flex;
