@@ -2,7 +2,7 @@
     <transition name="swipe">
         <div class="certificates-container" :key="languageKey">
             <div class="certificates">
-                <div v-for="certificate in certificates" :key="certificate.title" class="certificate">
+                <div v-for="certificate in certificates" :key="certificate.title" class="card certificate">
                     <h3>{{ certificate.title }}</h3>
                     <img :src="certificate.image" :alt="certificate.title" />
                     <h4>{{ certificate.description }}</h4>
@@ -24,6 +24,7 @@ const languageKey = computed(() => store.btnLang);
 
 <style scoped lang="scss">
 @import '../../src/assets/styles/transitions.scss';
+@import '../../src/assets/styles/themes.scss';
 
 .certificates-container {
     flex-direction: column;
@@ -36,17 +37,17 @@ const languageKey = computed(() => store.btnLang);
 
     .certificates {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         gap: 2rem;
+        justify-content: center;
 
         .certificate {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            height: 30rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            display: grid;
+            grid-template-rows: 1fr 2fr 1fr;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 0.3rem;
+            place-content: center;
 
             h3 {
                 font-size: 1.5rem;

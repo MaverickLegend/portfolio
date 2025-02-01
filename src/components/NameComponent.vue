@@ -44,12 +44,12 @@ const languageKey = computed(() => store.btnLang);
 
         h1 {
             font-size: 4rem;
-            color: $color-white;
+            color: var(--accent-teal);
         }
 
         h2 {
             font-size: 2rem;
-            color: $color-gray-light;
+            color: var(--text);
         }
 
     }
@@ -61,11 +61,12 @@ const languageKey = computed(() => store.btnLang);
 
         h3 {
             font-size: 1.5rem;
-            color: $color-gray-light;
+            color: var(--accent-blue);
         }
 
         span {
             font-size: 1rem;
+            color: var(--accent-purple);
         }
     }
 }

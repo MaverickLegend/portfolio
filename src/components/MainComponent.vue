@@ -1,33 +1,35 @@
 <template>
-    <div class="wrapper">
-        <div class="home">
-            <transition name="swipe" mode="out-in">
-                <div class="content" :key="languageKey">
-                    <!-- <router-view v-slot="{ Component }">
-                        <transition name="fade-slide" mode="in-out">
-                            <component :is="Component" />
-                        </transition>
-                    </router-view> -->
-                    <transition name="fade-slide" mode="in-out">
-                        <RouterView />
-                    </transition>
-                </div>
-            </transition>
-            <SkillsComponent />
+    <transition name="disolve" mode="out-in">
+        <div class="wrapper" :key="setThemeTransition">
+            <div class="home">
+                <transition name="swipe" mode="out-in">
+                    <div class="content" :key="languageKey">
+                        <router-view v-slot="{ Component }">
+                            <transition name="fade-slide" mode="out-in">
+                                <component :is="Component" :key="$route.path" />
+                            </transition>
+                        </router-view>
+                        <!-- <transition name="fade-slide" mode="in-out">
+                            <RouterView />
+                        </transition> -->
+                    </div>
+                </transition>
+                <SkillsComponent />
+            </div>
+            <aside class="sidebar">
+                <ButtonsComponent />
+                <transition name="disolve" mode="out-in">
+                    <nav class="nav" :key="languageKey">
+                        <router-link v-for="(section, index) in sections" :key="index" :to=section.url class="link"
+                            active-class="active"> {{
+                                section.name }}
+                        </router-link>
+                    </nav>
+                </transition>
+                <LogoComponent />
+            </aside>
         </div>
-        <aside class="sidebar">
-            <ButtonsComponent />
-            <transition name="disolve" mode="out-in">
-                <div class="nav" :key="languageKey">
-                    <router-link v-for="(section, index) in sections" :key="index" :to=section.url class="link"
-                        active-class="active"> {{
-                            section.name }}
-                    </router-link>
-                </div>
-            </transition>
-            <LogoComponent />
-        </aside>
-    </div>
+    </transition>
 </template>
 <script setup lang="ts">
 import ButtonsComponent from './ButtonsComponent.vue';
@@ -35,8 +37,11 @@ import LogoComponent from './LogoComponent.vue';
 import SkillsComponent from './SkillsComponent.vue';
 import { useLanguageStore } from '../stores/useLanguageStore';
 import { computed } from 'vue';
+import { useThemeStore } from '../stores/useThemeStore';
 
 const store = useLanguageStore();
+const storeTheme = useThemeStore();
+const setThemeTransition = computed(() => storeTheme.theme);
 const language = computed(() => store.language);
 const languageKey = computed(() => store.btnLang);
 const sections = computed(() => language.value.sections);
@@ -47,13 +52,14 @@ const sections = computed(() => language.value.sections);
 @import "../assets/styles/transitions.scss";
 @import "../assets/styles/themes.scss";
 
+
 .wrapper {
     display: grid;
     grid-template-columns: 2.5fr 1.5fr;
     gap: 2rem;
     width: 100%;
     height: 100vh;
-    padding: 3rem 1rem;
+    padding: 3rem;
 
     .home {
         display: grid;
@@ -103,7 +109,7 @@ const sections = computed(() => language.value.sections);
                 &.active {
                     color: var(--accent-teal);
                     font-weight: var(--font-semibold);
-                    letter-spacing: var(--tracking-wider);
+                    letter-spacing: var(--tracking-wisder);
                 }
             }
         }

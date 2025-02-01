@@ -28,20 +28,14 @@
     transition: opacity 0.5s ease-in-out;
 }
 
-.disolve-enter-from {
-    opacity: 0;
-}
-
-.disolve-enter-to {
-    opacity: 1;
-}
-
-.disolve-leave-from {
-    opacity: 1;
-}
-
+.disolve-enter-from,
 .disolve-leave-to {
     opacity: 0;
+}
+
+.disolve-leave-from,
+.disolve-enter-to {
+    opacity: 1;
 }
 
 .fade-slide-enter-active,

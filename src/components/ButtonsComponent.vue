@@ -33,7 +33,7 @@ import { Icon } from '@iconify/vue/dist/iconify.js';
 
 
 const store = useLanguageStore();
-const isLangChecked = ref(store.btnLang === 'en');
+const isLangChecked = ref(store.btnLang === 'es');
 const toggleLanguage = () => {
     const lang = isLangChecked.value ? 'en' : 'es';
     store.handleLanguage(lang);
@@ -59,7 +59,7 @@ const icons: Icon[] = [
     { name: 'Github', icon: 'github fa-brands fa-github fa-xl', link: 'https://github.com/MaverickLegend' },
     { name: 'Gmail', icon: 'gmail fa-solid fa-square-envelope fa-xl', link: 'mailto:malcolmrojas.f@gmail.com' },
     { name: 'LinkedIn', icon: 'fa-brands fa-linkedin fa-xl', link: 'https://www.linkedin.com/in/malcolmrojas/' },
-    { name: 'CV', icon: 'fa-solid fa-file-pdf fa-xl', link: '../../public/assets/files/CV.pdf' },
+    { name: 'CV', icon: 'fa-solid fa-file-pdf fa-xl', link: '/assets/files/CV-es.pdf' },
 ];
 </script>
 

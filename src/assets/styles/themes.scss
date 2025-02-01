@@ -35,8 +35,9 @@
     --primary: var(--primary-light);
     --secondary: var(--secondary-light);
     --text: var(--text-light);
-    --glass-bg: var(--glass-light-bg);
-    --glass-border: var(--glass-light-border);
+    --glass-bg: var(--glass-dark-bg);
+    --glass-border: var(--glass-dark-border);
+    --glass-text: var(--text-dark);
     --shadow: var(--shadow-light);
     --accent-teal: var(--accent-teal-light);
     --accent-blue: var(--accent-blue-light);
@@ -47,8 +48,9 @@
     --primary: var(--primary-dark);
     --secondary: var(--secondary-dark);
     --text: var(--text-dark);
-    --glass-bg: var(--glass-dark-bg);
-    --glass-border: var(--glass-dark-border);
+    --glass-bg: var(--glass-light-bg);
+    --glass-border: var(--glass-light-border);
+    --glass-text: var(--text-light);
     --shadow: var(--shadow-dark);
     --accent-teal: var(--accent-teal-dark);
     --accent-blue: var(--accent-blue-dark);
@@ -73,18 +75,17 @@
 // .text-3xl { font-size: var(--font-3xl); }
 // .text-4xl { font-size: var(--font-4xl); }
 
-// .card {
-//   background: var(--glass-bg);s
-//   border: 1px solid var(--glass-border);
-//   backdrop-filter: blur(var(--glass-blur));
-//   box-shadow: var(--shadow);
-//   color: var(--text);
-//   padding: 1.5rem;
-//   border-radius: 1rem;
-//   transition: all 0.3s ease;
-// }
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  color: var(--glass-text);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
 
-// .card:hover {
-//   transform: translateY(-2px);
-//   box-shadow: var(--shadow), 0 10px 40px rgba(0, 0, 0, 0.1);
-// }
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow), 0 10px 40px rgba(0, 0, 0, 0.1);
+}

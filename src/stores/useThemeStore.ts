@@ -1,4 +1,3 @@
-// stores/themeStore.ts
 import { defineStore } from "pinia";
 
 export const useThemeStore = defineStore("theme", {
@@ -8,8 +7,10 @@ export const useThemeStore = defineStore("theme", {
   actions: {
     toggleTheme() {
       this.theme = this.theme === "light" ? "dark" : "light";
+      setTimeout(() => {
+        document.documentElement.setAttribute("data-theme", this.theme);
+      }, 500);
       localStorage.setItem("theme", this.theme);
-      document.documentElement.setAttribute("data-theme", this.theme);
     },
   },
 });
