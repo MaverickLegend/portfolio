@@ -1,8 +1,7 @@
 <template>
-    <transition name="swipe">
+    <transition name="disolve" mode="out-in">
         <div class="presentation-container" :key="languageKey">
             <div class="name-container">
-                <h2>{{ name.hello }}</h2>
                 <h1>{{ name.name }}</h1>
             </div>
             <div class="alias-container">
@@ -32,15 +31,17 @@ const languageKey = computed(() => store.btnLang);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-top: 1rem;
     border-radius: 0.3rem;
     text-align: center;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    height: 100%;
 
     .name-container {
-        padding-bottom: 1rem;
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        height: 100%;
 
         h1 {
             font-size: 4rem;
@@ -55,9 +56,11 @@ const languageKey = computed(() => store.btnLang);
     }
 
     .alias-container {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
 
         h3 {
             font-size: 1.5rem;

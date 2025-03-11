@@ -1,60 +1,56 @@
 :root {
   /* Colores Base */
-    --primary-light: #ffffffad;
-    --secondary-light: #f5f5f5;
-    --text-light: #333333;
-    --accent-teal-light: #2A9D8F;
-    --accent-blue-light: #264653;
-    --accent-purple-light: #6A0572;
-    
-    --primary-dark: #1e1e1e7a;
-    --secondary-dark: #2c2c2c;
-    --text-dark: #ffffff;
-    --accent-teal-dark: #64E0B9;
-    --accent-blue-dark: #7CB4DD;
-    --accent-purple-dark: #9B8AD4;
+  --primary-light: #ffffffad;
+  --secondary-light: #f5f5f5;
+  --text-light: #333333;
+  --accent-teal-light: #2A9D8F;
+  --accent-blue-light: #264653;
+  --accent-purple-light: #6A0572;
 
-    /* Colores de Acento */
-    // --accent-blue: #7CB4DD;
-    // --accent-purple: #9B8AD4;
-    // --accent-teal: #64E0B9;
+  --primary-dark: #1e1e1e7a;
+  --secondary-dark: #2c2c2c;
+  --text-dark: #ffffff;
+  --accent-teal-dark: #64E0B9;
+  --accent-blue-dark: #7CB4DD;
+  --accent-purple-dark: #9B8AD4;
 
-    /* Configuración Glassmorphism */
-    --glass-light-bg: rgba(255, 255, 255, 0.08);
-    --glass-light-border: rgba(255, 255, 255, 0.12);
-    --glass-dark-bg: rgba(18, 18, 24, 0.15);
-    --glass-dark-border: rgba(255, 255, 255, 0.05);
-    --glass-blur: 12px;
-    
-    /* Sombras */
-    --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  /* Configuración Glassmorphism */
+  --glass-light-bg: rgba(255, 255, 255, 0.08);
+  --glass-light-border: rgba(255, 255, 255, 0.12);
+  --glass-dark-bg: rgba(18, 18, 24, 0.15);
+  --glass-dark-border: rgba(255, 255, 255, 0.05);
+  --glass-blur: 12px;
+
+  /* Sombras */
+  --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="light"] {
-    --primary: var(--primary-light);
-    --secondary: var(--secondary-light);
-    --text: var(--text-light);
-    --glass-bg: var(--glass-dark-bg);
-    --glass-border: var(--glass-dark-border);
-    --glass-text: var(--text-dark);
-    --shadow: var(--shadow-light);
-    --accent-teal: var(--accent-teal-light);
-    --accent-blue: var(--accent-blue-light);
-    --accent-purple: var(--accent-purple-light);
+  --primary: var(--primary-light);
+  --secondary: var(--secondary-light);
+  --text: var(--text-light);
+  --glass-bg: var(--glass-dark-bg);
+  --glass-border: var(--glass-dark-border);
+  --glass-text: var(--text-dark);
+  --shadow: var(--shadow-light);
+  --accent-teal: var(--accent-teal-light);
+  --accent-blue: var(--accent-blue-light);
+  --accent-purple: var(--accent-purple-light);
 }
 
 [data-theme="dark"] {
-    --primary: var(--primary-dark);
-    --secondary: var(--secondary-dark);
-    --text: var(--text-dark);
-    --glass-bg: var(--glass-light-bg);
-    --glass-border: var(--glass-light-border);
-    --glass-text: var(--text-light);
-    --shadow: var(--shadow-dark);
-    --accent-teal: var(--accent-teal-dark);
-    --accent-blue: var(--accent-blue-dark);
-    --accent-purple: var(--accent-purple-dark);
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+  --text: var(--text-dark);
+  --glass-bg: var(--glass-light-bg);
+  --glass-border: var(--glass-light-border);
+  --glass-text: var(--text-light);
+  --shadow: var(--shadow-dark);
+  --accent-teal: var(--accent-teal-dark);
+  --accent-blue: var(--accent-blue-dark);
+  --accent-purple: var(--accent-purple-dark);
 }
 
 /* Clases de utilidad para Glassmorphism */
@@ -64,16 +60,6 @@
   backdrop-filter: blur(var(--glass-blur));
   box-shadow: var(--shadow);
 }
-
-// /* Clases de utilidad para tipografía */
-// .text-xs { font-size: var(--font-xs); }
-// .text-sm { font-size: var(--font-sm); }
-// .text-base { font-size: var(--font-base); }
-// .text-lg { font-size: var(--font-lg); }
-// .text-xl { font-size: var(--font-xl); }
-// .text-2xl { font-size: var(--font-2xl); }
-// .text-3xl { font-size: var(--font-3xl); }
-// .text-4xl { font-size: var(--font-4xl); }
 
 .card {
   background: var(--glass-bg);

@@ -1,9 +1,9 @@
 <template>
-    <NameComponent />
+    <AboutComponent />
 </template>
 
 <script setup lang="ts">
-import NameComponent from '../components/NameComponent.vue';
+import AboutComponent from '../components/AboutComponent.vue';
 
 </script>
 

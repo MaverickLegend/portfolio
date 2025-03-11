@@ -6,38 +6,24 @@
                     <div class="content" :key="languageKey">
                         <router-view v-slot="{ Component }">
                             <transition name="fade-slide" mode="out-in">
-                                <component :is="Component" :key="$route.path" />
+                                <component :is="Component" :key="$route.path" :sectionTitle="sectionTitle" />
                             </transition>
                         </router-view>
-                        <!-- <transition name="fade-slide" mode="in-out">
-                            <RouterView />
-                        </transition> -->
                     </div>
                 </transition>
-                <SkillsComponent />
             </div>
-            <aside class="sidebar">
-                <ButtonsComponent />
-                <transition name="disolve" mode="out-in">
-                    <nav class="nav" :key="languageKey">
-                        <router-link v-for="(section, index) in sections" :key="index" :to=section.url class="link"
-                            active-class="active"> {{
-                                section.name }}
-                        </router-link>
-                    </nav>
-                </transition>
-                <LogoComponent />
-            </aside>
+            <NavbarComponent class="nav" :sections="sections" :languageKey="languageKey" />
+            <SkillsComponent class="skills" />
         </div>
     </transition>
 </template>
 <script setup lang="ts">
-import ButtonsComponent from './ButtonsComponent.vue';
-import LogoComponent from './LogoComponent.vue';
+import NavbarComponent from './NavbarComponent.vue';
 import SkillsComponent from './SkillsComponent.vue';
 import { useLanguageStore } from '../stores/useLanguageStore';
 import { computed } from 'vue';
 import { useThemeStore } from '../stores/useThemeStore';
+import { useRoute } from 'vue-router';
 
 const store = useLanguageStore();
 const storeTheme = useThemeStore();
@@ -45,6 +31,11 @@ const setThemeTransition = computed(() => storeTheme.theme);
 const language = computed(() => store.language);
 const languageKey = computed(() => store.btnLang);
 const sections = computed(() => language.value.sections);
+const route = useRoute();
+const sectionTitle = computed(() => {
+    const section = sections.value.find(section => section.url === route.path);
+    return section?.name;
+});
 
 </script>
 
@@ -55,17 +46,26 @@ const sections = computed(() => language.value.sections);
 
 .wrapper {
     display: grid;
-    grid-template-columns: 2.5fr 1.5fr;
+    grid-template-areas:
+        "home nav"
+        "skills nav";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
     gap: 2rem;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    max-width: 1600px;
+    max-height: 900px;
     padding: 3rem;
 
     .home {
-        display: grid;
-        grid-template-rows: 4fr 2fr;
+        grid-area: home;
+        display: flex;
         border-radius: 0.3rem;
         gap: 1rem;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
 
         .content {
             padding: 1rem;
@@ -74,45 +74,16 @@ const sections = computed(() => language.value.sections);
             background-color: var(--primary);
             border: solid 1px var(--shadow);
             box-shadow: var(--shadow);
+            width: 100%;
         }
     }
 
-    .sidebar {
-        border-radius: 0.3rem;
-        padding: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: var(--shadow);
-        background-color: var(--primary);
+    .nav {
+        grid-area: nav;
+    }
 
-        .nav {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            padding: 4rem 1rem;
-
-            .link {
-                font-family: var(--font-main);
-                color: var(--text);
-                font-size: var(--text-2xl);
-                font-weight: var(--font-medium);
-                text-decoration: none;
-                transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, letter-spacing ease-in-out 0.3s;
-
-                &:hover {
-                    transform-origin: left;
-                    color: var(--accent-teal);
-                    letter-spacing: var(--tracking-wider);
-                }
-
-                &.active {
-                    color: var(--accent-teal);
-                    font-weight: var(--font-semibold);
-                    letter-spacing: var(--tracking-wisder);
-                }
-            }
-        }
+    .skills {
+        grid-area: skills;
     }
 }
 </style>

@@ -69,8 +69,11 @@ const icons: Icon[] = [
     align-items: center;
     justify-content: space-between;
     padding-left: 1rem;
-    border-bottom: solid 1px var(--text);
     height: 5rem;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    border-radius: 0.3rem;
+    height: 100%;
 
     .icon-container {
 

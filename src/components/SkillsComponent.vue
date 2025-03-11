@@ -2,7 +2,7 @@
     <div class="skills-container">
         <transition name="disolve" mode="out-in">
             <div class="title" :key="languageKey">
-                <h1>{{ skillsTitle }}</h1>
+                <h1 class="heading-1">{{ skillsTitle.toUpperCase() }}</h1>
             </div>
         </transition>
         <div class="skills">
@@ -61,15 +61,6 @@ const skills: Skill[] = [
     width: 100%;
     background-color: var(--primary);
     border-radius: 0.3rem;
-
-    h1 {
-        padding-bottom: 1.5rem;
-        font-family: var(--font-main);
-        font-size: var(--text-4xl);
-        font-weight: var(--font-bold);
-        letter-spacing: var(--tracking-tight);
-        color: var(--accent-blue);
-    }
 
     .skills {
         display: flex;

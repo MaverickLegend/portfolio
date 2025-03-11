@@ -1,8 +1,6 @@
 <template>
     <div class="logo-container">
-        <router-link to="/">
-            <div class="logo"></div>
-        </router-link>
+        <div class="logo"></div>
     </div>
 </template>
 

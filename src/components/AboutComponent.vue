@@ -1,7 +1,7 @@
 <template>
     <transition name="swipe">
         <div class="about-container" :key="languageKey">
-            <h1>{{ about.title.toUpperCase() }}</h1>
+            <h1 class="heading-1">{{ sectionTitle.toUpperCase() }}</h1>
             <p>{{ about.description }}</p>
         </div>
     </transition>
@@ -15,6 +15,12 @@ const store = useLanguageStore();
 const language = computed(() => store.language);
 const about = computed(() => language.value.about);
 const languageKey = computed(() => store.btnLang);
+defineProps({
+    sectionTitle: {
+        type: String,
+        required: true,
+    },
+});
 
 </script>
 
@@ -31,16 +37,6 @@ const languageKey = computed(() => store.btnLang);
     padding: 1rem;
     border-radius: 0.5rem;
     color: var(--text);
-
-    h1 {
-        align-self: baseline;
-        font-family: var(--font-main);
-        font-size: var(--text-4xl);
-        font-weight: var(--font-bold);
-        letter-spacing: var(--tracking-tight);
-        color: var(--accent-blue);
-        padding: 1rem;
-    }
 
     p {
         font-family: var(--font-secondary);

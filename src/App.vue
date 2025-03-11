@@ -5,9 +5,7 @@ import MainComponent from './components/MainComponent.vue';
 
 <template>
   <div id="app">
-    <main>
-      <MainComponent />
-    </main>
+    <MainComponent />
   </div>
 </template>
 
@@ -17,7 +15,7 @@ import MainComponent from './components/MainComponent.vue';
 @import './assets/styles/fonts.scss';
 
 #app {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -25,6 +23,5 @@ import MainComponent from './components/MainComponent.vue';
   background-image: url('../src/assets/img/Leonardo_Phoenix_09_A_mesmerizing_highresolution_outer_spacein_3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 </style>
