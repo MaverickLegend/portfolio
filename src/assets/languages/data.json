@@ -16,14 +16,14 @@
             "subtitle": "FrontEnd Developer | Vue.js",
             "description": "FrontEnd Developer certificate in Javascript and Vue.js, granted by Sence Chile in colaboration with Talento Digital para Chile.",
             "link": "https://www.acreditta.com/credential/db2c3e10-96ca-4cbd-937f-671e500e2a79",
-            "image": "../../../public/assets/files/sence.png"
+            "image": "/public/assets/files/sence.png"
           },
           {
             "title": "Ef SET",
             "subtitle": "Ef SET C2 English Certificate",
             "description": "C2 English Certificate granted by Ef SET, accrediting an advanced level of english.",
             "link": "https://cert.efset.org/qgBeVh",
-            "image": "../../../public/assets/files/efset.png"
+            "image": "/public/assets/files/efset.png"
           }
         ]
       },
@@ -79,14 +79,14 @@
             "subtitle": "Desarrollador FrontEnd | Vue.js",
             "description": "Certificado de FrontEnd Developer en Javascript y Vue.js, otorgado por Sence Chile.",
             "link": "https://www.acreditta.com/credential/db2c3e10-96ca-4cbd-937f-671e500e2a79",
-            "image": "../../../public/assets/files/sence.png"
+            "image": "/assets/files/sence.png"
           },
           {
             "title": "Ef SET",
             "subtitle": "Certificado de Inglés Ef SET C2",
             "description": "Certificado de Inglés C2 otorgado por Ef SET, que acredita un nivel de inglés avanzado.",
             "link": "https://cert.efset.org/qgBeVh",
-            "image": "../../../public/assets/files/efset.png"
+            "image": "/assets/files/efset.png"
           }
         ]
       },
