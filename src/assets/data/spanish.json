@@ -28,8 +28,24 @@
       }
     ],
     "about": {
-      "title": "Sobre mí",
-      "description": "Técnico en Programación y Análisis de Sistemas, en busca de mi primera oportunidad profesional en aplicaciones web y desarrollo de software. Soy muy apasionado por la tecnología y la programación, y siempre estoy buscando profundizar mis conocimientos y mejorar mis habilidades. Me encanta trabajar en equipos y apoyo mutuo para lograr objetivos comunes. También trabajo como Técnico en Sonido orientado a la amplificación sonora, por lo que tengo habilidades muy afiladas para resolver problemas bajo situaciones dinámicas."
+      "title": "Desarrollador de Software & Técnico en Sonido",
+      "intro": "Donde código y sonido se encuentran",
+      "description": "Construyo soluciones digitales con la misma precisión con que afino sistemas de sonido y video: detectando ruido, iterando y entregando experiencias impecables. En búsqueda de mi primera oportunidad profesional como desarrollador de software. Soy muy apasionado por la tecnología y la programación, y siempre estoy buscando profundizar mis conocimientos y mejorar mis habilidades.",
+      "highlights": [
+        "Resolución de problemas bajo situaciones dinámicas y emergentes",
+        "Colaboración efectiva en equipos multidisciplinarios",
+        "Aprendizaje continuo y curiosidad técnica",
+        "Capacidad de adaptación a nuevas tecnologías y entornos"
+      ],
+      "quote": "La mejor tecnología es invisible; funciona tan bien que solo ves la magia ocurrir.",
+      "skills_table": {
+        "headers": ["Habilidad", "Experiencia"],
+        "rows": [
+          ["Trabajo bajo presión", "5 años en eventos en vivo"],
+          ["Detalle técnico", "Optimización de código y sistemas"],
+          ["Comunicación clara", "Desde el escenario al desarrollo"]
+        ]
+      }
     },
     "skills": {
       "title": "Habilidades"

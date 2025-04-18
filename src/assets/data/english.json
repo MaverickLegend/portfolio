@@ -28,8 +28,24 @@
       }
     ],
     "about": {
-      "title": "About me",
-      "description": "Programming and Systems Analysis graduate, looking for my first professional opportunity in web applications and software development. I am ve  passionate about technology and programming, and I'm always looking forward to deepen my knowledge and improve my skills. I love working in teams and mutual support  achieve common goals. I also work as a Sound Technician oriented to sound reinforcement, so I have very sharpened skills towards problem solving under dynamic situations"
+      "title": "Software Developer & Sound Technician",
+      "intro": "Where code and sound meet",
+      "description": "I build digital solutions with the same precision I use to tune sound and video systems: detecting noise, iterating, and delivering flawless experiences. I am looking for my first professional opportunity as a software developer. I am very passionate about technology and programming, and I am always looking to deepen my knowledge and improve my skills.",
+      "highlights": [
+        "Problem-solving under dynamic and emergent situations",
+        "Effective collaboration in multidisciplinary teams",
+        "Continuous learning and technical curiosity",
+        "Ability to adapt to new technologies and environments"
+      ],
+      "quote": "The best technology is invisible; it works so well that you only see the magic happen.",
+      "skills_table": {
+        "headers": ["Habilidad", "Experiencia"],
+        "rows": [
+          ["Trabajo bajo presión", "5 años en eventos en vivo"],
+          ["Detalle técnico", "Optimización de código y sistemas"],
+          ["Comunicación clara", "Desde el escenario al desarrollo"]
+        ]
+      }
     },
     "skills": {
       "title": "Skills"

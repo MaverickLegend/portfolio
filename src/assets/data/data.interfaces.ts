@@ -49,7 +49,14 @@ export interface Presentation {
 
 export interface About {
   title: string;
+  intro: string;
   description: string;
+  highlights: string[];
+  quote: string;
+  skills_table: {
+    headers: [string, string];
+    rows: [string, string][];
+  };
 }
 
 export interface Technology {
