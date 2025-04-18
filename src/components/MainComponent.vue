@@ -12,12 +12,13 @@
                     </div>
                 </transition>
             </div>
-            <NavbarComponent class="nav" :sections="sections" :languageKey="languageKey" />
+            <NavbarComponent class="nav" :languageKey="languageKey" />
             <SkillsComponent class="skills" />
         </div>
     </transition>
 </template>
 <script setup lang="ts">
+
 import NavbarComponent from './NavbarComponent.vue';
 import SkillsComponent from './SkillsComponent.vue';
 import { useLanguageStore } from '../stores/useLanguageStore';
@@ -28,9 +29,8 @@ import { useRoute } from 'vue-router';
 const store = useLanguageStore();
 const storeTheme = useThemeStore();
 const setThemeTransition = computed(() => storeTheme.theme);
-const language = computed(() => store.language);
-const languageKey = computed(() => store.btnLang);
-const sections = computed(() => language.value.sections);
+const languageKey = computed(() => store.current.code);
+const sections = computed(() => store.sections);
 const route = useRoute();
 const sectionTitle = computed(() => {
     const section = sections.value.find(section => section.url === route.path);

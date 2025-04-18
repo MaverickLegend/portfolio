@@ -20,7 +20,7 @@ import MainComponent from './components/MainComponent.vue';
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../src/assets/img/Leonardo_Phoenix_09_A_mesmerizing_highresolution_outer_spacein_3.jpg');
+  background-image: url('../public/assets/img/layout/Leonardo_Phoenix_09_A_mesmerizing_highresolution_outer_spacein_3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }

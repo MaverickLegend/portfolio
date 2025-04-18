@@ -3,8 +3,8 @@
         <ButtonsComponent class="buttons" />
         <NameComponent class="presentation" />
         <transition name="disolve" mode="out-in">
-            <nav class="nav" :key="props.languageKey">
-                <router-link v-for="(section, index) in props.sections" :key="index" :to=section.url class="link"
+            <nav class="nav" :key="languageKey">
+                <router-link v-for="(section, index) in sections" :key="index" :to=section.url class="link"
                     active-class="active"> {{
                         section.name }}
                 </router-link>
@@ -19,19 +19,12 @@
 import ButtonsComponent from './ButtonsComponent.vue';
 import LogoComponent from './LogoComponent.vue';
 import NameComponent from './PresentationComponent.vue';
+import { computed } from 'vue';
+import { useLanguageStore } from '../stores/useLanguageStore';
 
-interface Section {
-    id: number;
-    name: string;
-    url: string;
-}
-
-interface NavBarProps {
-    sections: Section[];
-    languageKey: string;
-}
-
-const props = defineProps<NavBarProps>();
+const store = useLanguageStore();
+const sections = computed(() => store.sections);
+const languageKey = computed(() => store.current.code);
 
 </script>
 

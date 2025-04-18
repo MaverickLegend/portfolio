@@ -17,7 +17,7 @@
 
 
     .logo {
-        background-image: url('../assets/img/wizard_logo2.png');
+        background-image: url('../../public/assets/img/layout/wizard_logo2.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;

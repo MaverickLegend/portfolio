@@ -28,12 +28,12 @@ import { computed } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination'; // Estilos de paginación
-import 'swiper/css/navigation'; // Estilos de navegación
+import 'swiper/css/pagination';
+import 'swiper/css/navigation'; 
 
 const store = useLanguageStore();
-const certificates = computed(() => store.language.presentation.certificates);
-const languageKey = computed(() => store.btnLang);
+const certificates = computed(() => store.certificates);
+const languageKey = computed(() => store.current.code);
 const modules = [Pagination, Navigation];
 defineProps({
     sectionTitle: {

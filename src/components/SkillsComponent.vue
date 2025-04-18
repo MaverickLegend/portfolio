@@ -26,9 +26,8 @@ interface Skill {
 }
 
 const store = useLanguageStore();
-const language = computed(() => store.language);
-const skillsTitle = computed(() => language.value.skills.title);
-const languageKey = computed(() => store.btnLang);
+const skillsTitle = computed(() => store.skills.title);
+const languageKey = computed(() => store.current.code);
 
 const skills: Skill[] = [
     { name: 'JavaScript', color: '#F7DF1E', icon: 'skill-icons:javascript' },

@@ -1,0 +1,173 @@
+{
+  "id": 2,
+  "name": "Español",
+  "code": "es",
+  "icon": "es",
+  "cv": "/assets/files/CVCristiánRojasDev2025Spanish.pdf",
+  "content": {
+    "presentation": {
+      "hello": "Hola, soy",
+      "name": "Cristián Rojas",
+      "alias": "MaverickLegend",
+      "webdeveloper": "Desarrollador web Front-end"
+    },
+    "certificates": [
+      {
+        "title": "Sence",
+        "subtitle": "Desarrollador FrontEnd | Vue.js",
+        "description": "Certificado de FrontEnd Developer en Javascript y Vue.js, otorgado por Sence Chile.",
+        "link": "https://www.acreditta.com/credential/db2c3e10-96ca-4cbd-937f-671e500e2a79",
+        "image": "/assets/img/certificates/sence.png"
+      },
+      {
+        "title": "Ef SET",
+        "subtitle": "Certificado de Inglés Ef SET C2",
+        "description": "Certificado de Inglés C2 otorgado por Ef SET, que acredita un nivel de inglés avanzado.",
+        "link": "https://cert.efset.org/qgBeVh",
+        "image": "/assets/img/certificates/efset.png"
+      }
+    ],
+    "about": {
+      "title": "Sobre mí",
+      "description": "Técnico en Programación y Análisis de Sistemas, en busca de mi primera oportunidad profesional en aplicaciones web y desarrollo de software. Soy muy apasionado por la tecnología y la programación, y siempre estoy buscando profundizar mis conocimientos y mejorar mis habilidades. Me encanta trabajar en equipos y apoyo mutuo para lograr objetivos comunes. También trabajo como Técnico en Sonido orientado a la amplificación sonora, por lo que tengo habilidades muy afiladas para resolver problemas bajo situaciones dinámicas."
+    },
+    "skills": {
+      "title": "Habilidades"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "viewProject": "Ver proyecto",
+      "viewCode": "Ver código",
+      "items": [
+        {
+          "title": "Rawg Api",
+          "description": "Prueba técnica realizada para el cargo de Desarrollador Frontend, utilizando la API de Rawg.io para mostrar información de videojuegos.",
+          "image": "/assets/img/projects/rawgapi.png",
+          "url": "https://rawg-api-tt.vercel.app",
+          "repo": "https://github.com/MaverickLegend/rawg-api-tt",
+          "technologies": [
+            {
+              "title": "React",
+              "icon": "skill-icons:react-light",
+              "color": "#61DAFB"
+            },
+            {
+              "title": "TypeScript",
+              "icon": "skill-icons:typescript",
+              "color": "#3178c6"
+            },
+            {
+              "title": "DaisyUI",
+              "icon": "logos:daisyui-icon",
+              "color": "#A78BFA"
+            },
+            {
+              "title": "Tailwind CSS",
+              "icon": "skill-icons:tailwindcss-light",
+              "color": "#38B2AC"
+            },
+            {
+              "title": "Zustand",
+              "icon": "devicon:zustand",
+              "color": "#FBBF24"
+            }
+          ]
+        },
+        {
+          "title": "Mi Portafolio",
+          "description": "Mi portafolio web hecho con Vue.js, alojado en VPS con Nginx y Docker.",
+          "image": "/assets/img/projects/portfolio.png",
+          "url": "https://cristianrojasdev.website",
+          "repo": "https://github.com/MaverickLegend/portfolio",
+          "technologies": [
+            {
+              "title": "Vue",
+              "icon": "skill-icons:vuejs-light",
+              "color": "#42b883"
+            },
+            {
+              "title": "TypeScript",
+              "icon": "skill-icons:typescript",
+              "color": "#3178c6"
+            },
+            {
+              "title": "Pinia",
+              "icon": "skill-icons:pinia-light",
+              "color": "#ffda44"
+            },
+            {
+              "title": "SCSS",
+              "icon": "skill-icons:sass",
+              "color": "#cc6699"
+            },
+            {
+              "title": "Docker",
+              "icon": "skill-icons:docker",
+              "color": "#2496ED"
+            },
+            {
+              "title": "Nginx",
+              "icon": "skill-icons:nginx",
+              "color": "#009639"
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "En desarrollo",
+      "contactForm": [
+        {
+          "id": "name",
+          "label": "Name",
+          "placeholder": "Ingrese su nombre",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "email",
+          "label": "Email",
+          "placeholder": "Ingrese su correo electrónico",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "message",
+          "label": "Mensaje",
+          "placeholder": "Ingrese su mensaje",
+          "type": "textarea",
+          "required": true
+        }
+      ]
+    },
+
+    "sections": [
+      {
+        "id": 1,
+        "name": "Proyectos",
+        "url": "/projects"
+      },
+      {
+        "id": 2,
+        "name": "Sobre mí",
+        "url": "/about"
+      },
+      {
+        "id": 3,
+        "name": "Certificados",
+        "url": "/certificates"
+      },
+      {
+        "id": 4,
+        "name": "Contacto",
+        "url": "/contact"
+      }
+    ],
+    "settings": {
+      "darkmode": "Modo oscuro",
+      "lightmode": "Modo claro",
+      "english": "Inglés",
+      "spanish": "Español"
+    }
+  }
+}

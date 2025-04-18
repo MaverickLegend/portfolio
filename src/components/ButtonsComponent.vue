@@ -26,17 +26,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useLanguageStore } from '../stores/useLanguageStore'
 import { useThemeStore } from '../stores/useThemeStore';
 import { Icon } from '@iconify/vue/dist/iconify.js';
 
 
 const store = useLanguageStore();
-const isLangChecked = ref(store.btnLang === 'es');
+
+const isLangChecked = ref(store.current.code === 'es');
+
 const toggleLanguage = () => {
     const lang = isLangChecked.value ? 'en' : 'es';
-    store.handleLanguage(lang);
+    store.setLanguage(lang);
     isLangChecked.value = !isLangChecked.value;
 };
 
@@ -49,18 +51,19 @@ const toggleTheme = () => {
     themeStore.toggleTheme();
 };
 
+const cv = computed(() => store.cv)
 interface Icon {
     name: string;
     icon: string;
     link: string;
 }
 
-const icons: Icon[] = [
+const icons = computed<Icon[]>(() => [
     { name: 'Github', icon: 'github fa-brands fa-github fa-xl', link: 'https://github.com/MaverickLegend' },
-    { name: 'Gmail', icon: 'gmail fa-solid fa-square-envelope fa-xl', link: 'mailto:malcolmrojas.f@gmail.com' },
+    // { name: 'Gmail', icon: 'gmail fa-solid fa-square-envelope fa-xl', link: 'mailto:malcolmrojas.f@gmail.com' },
     { name: 'LinkedIn', icon: 'fa-brands fa-linkedin fa-xl', link: 'https://www.linkedin.com/in/malcolmrojas/' },
-    { name: 'CV', icon: 'fa-solid fa-file-pdf fa-xl', link: '/assets/files/CV-es.pdf' },
-];
+    { name: 'CV', icon: 'fa-solid fa-file-pdf fa-xl', link: cv.value },
+]);
 </script>
 
 <style scoped lang="scss">
@@ -116,7 +119,7 @@ const icons: Icon[] = [
 
             .cv {
                 &:hover {
-                    color: var(--accent-blue);
+                    color: #da140d;
                 }
             }
         }

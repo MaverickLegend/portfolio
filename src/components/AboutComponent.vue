@@ -12,9 +12,8 @@ import { computed } from 'vue';
 import { useLanguageStore } from '../stores/useLanguageStore'
 
 const store = useLanguageStore();
-const language = computed(() => store.language);
-const about = computed(() => language.value.about);
-const languageKey = computed(() => store.btnLang);
+const about = computed(() => store.about);
+const languageKey = computed(() => store.current.code);
 defineProps({
     sectionTitle: {
         type: String,

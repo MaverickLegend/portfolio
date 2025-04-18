@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap');
+
 :root {
   /* Sistema de Fuentes */
   --font-main: 'Plus Jakarta Sans', sans-serif;
@@ -6,6 +8,8 @@
   /* Fuente secundaria */
   --font-mono: 'JetBrains Mono', monospace;
   /* Para código */
+  --font-title: 'Montserrat', sans-serif;
+  /* Fuente para títulos */
 
   /* Tamaños base */
   --text-xs: 0.75rem;
@@ -49,7 +53,7 @@
 /* Clases de utilidad para implementación */
 
 .heading-1 {
-  font-family: var(--font-secondary);
+  font-family: var(--font-title);
   font-size: var(--text-3xl);
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);

@@ -2,11 +2,11 @@
     <transition name="disolve" mode="out-in">
         <div class="presentation-container" :key="languageKey">
             <div class="name-container">
-                <h1>{{ name.name }}</h1>
+                <h1>{{ presentation.name }}</h1>
             </div>
             <div class="alias-container">
-                <h3>{{ name.webdeveloper }}</h3>
-                <span>{{ name.alias }}</span>
+                <h3>{{ presentation.webdeveloper }}</h3>
+                <span>{{ presentation.alias }}</span>
             </div>
         </div>
     </transition>
@@ -18,9 +18,9 @@ import { useLanguageStore } from '../stores/useLanguageStore';
 import { computed } from 'vue';
 
 const store = useLanguageStore();
-const language = computed(() => store.language);
-const name = computed(() => language.value.presentation);
-const languageKey = computed(() => store.btnLang);
+const presentation = computed(() => store.presentation);
+const languageKey = computed(() => store.current.code);
+
 </script>
 
 <style lang="scss" scoped>
