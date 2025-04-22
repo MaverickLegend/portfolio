@@ -78,19 +78,40 @@ const icons = computed<Icon[]>(() => [
     border-radius: 0.3rem;
     height: 100%;
 
-    .icon-container {
+    @media (max-width: 900px) {
+        padding: 0.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        min-height: 3rem;
+    }
 
+    .icon-container {
         .icon {
             transition: ease-in-out 0.5s;
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 900px) {
+                justify-content: flex-start;
+            }
 
             a {
                 color: var(--accent-purple);
                 text-decoration: none;
                 padding-right: 2rem;
 
+                @media (max-width: 900px) {
+                    padding-right: 1rem;
+                }
+
                 i {
                     font-size: 2rem;
                     transition: ease-in-out 0.5s;
+
+                    @media (max-width: 900px) {
+                        font-size: 1.5rem;
+                    }
 
                     &:hover {
                         transform: rotate(360deg);
@@ -135,6 +156,11 @@ const icons = computed<Icon[]>(() => [
             font-size: 2rem;
             transition: ease-in-out 0.5s;
             padding-right: 1rem;
+
+            @media (max-width: 900px) {
+                font-size: 1.5rem;
+                padding-right: 0.5rem;
+            }
 
             &:hover {
                 transform: scale(1.2);

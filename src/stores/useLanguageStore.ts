@@ -9,7 +9,7 @@ export const useLanguageStore = defineStore("language", {
       en: en as Language,
       es: es as Language,
     },
-    current: en as Language,
+    current: es as Language,
   }),
   getters: {
     content: (state) => state.current.content,

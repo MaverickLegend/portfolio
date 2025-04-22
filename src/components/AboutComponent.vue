@@ -47,7 +47,6 @@ defineProps({
     flex-direction: column;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
 
     .about {
         display: flex;
@@ -56,8 +55,8 @@ defineProps({
         height: 100%;
         max-width: 1000px;
         margin: 0 auto;
+        overflow-y: auto;
 
-        // Sección de presentación
         .about-presentation {
             display: flex;
             flex-direction: column;
@@ -129,29 +128,25 @@ defineProps({
         }
 
         .about {
-            gap: 0.7rem;
-
             .about-presentation {
                 &__title {
                     font-size: 1rem;
                 }
 
                 &__intro {
-                    font-size: 0.8rem;
-                }
-
-                .about__description {
-                    font-size: 0.8rem;
+                    font-size: 1rem;
+                    margin-bottom: 0.2rem;
                 }
             }
 
             .about-skills {
                 &__highlights li {
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                 }
 
                 &__quote {
-                    font-size: 0.8rem;
+                    font-size: 1rem;
+                    text-align: center;
                 }
             }
         }

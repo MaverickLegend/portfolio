@@ -53,10 +53,27 @@ const sectionTitle = computed(() => {
     grid-template-rows: 2fr 1fr;
     gap: 2rem;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     max-width: 1600px;
-    max-height: 900px;
+    min-height: 100vh;
+    max-height: 100vh;
     padding: 3rem;
+    overflow: hidden;
+
+    @media (max-width: 1200px) {
+        grid-template-areas:
+            "nav"
+            "home"
+            "skills";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        gap: 1rem;
+        height: auto;
+        min-height: 100vh;
+        max-height: none;
+        padding: 1rem;
+        overflow-y: auto;
+    }
 
     .home {
         grid-area: home;
@@ -67,6 +84,11 @@ const sectionTitle = computed(() => {
         width: 100%;
         overflow: hidden;
 
+        @media (max-width: 900px) {
+            min-height: 50vh;
+            overflow-y: auto;
+        }
+
         .content {
             padding: 1rem;
             border-radius: 0.3rem;
@@ -75,6 +97,12 @@ const sectionTitle = computed(() => {
             border: solid 1px var(--shadow);
             box-shadow: var(--shadow);
             width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            @media (max-width: 900px) {
+                padding: 0.5rem;
+            }
         }
     }
 

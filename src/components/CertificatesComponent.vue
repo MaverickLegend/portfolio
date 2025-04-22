@@ -29,7 +29,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation'; 
+import 'swiper/css/navigation';
 
 const store = useLanguageStore();
 const certificates = computed(() => store.certificates);
@@ -58,10 +58,21 @@ defineProps({
     border-radius: 0.5rem;
     color: var(--text);
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 900px) {
+        padding: 0.5rem;
+        height: auto;
+    }
 
     .mySwiper {
         width: 100%;
         height: 100%;
+
+        @media (max-width: 900px) {
+            height: auto;
+        }
     }
 
     .swiper-slide {
@@ -72,6 +83,11 @@ defineProps({
         width: 100%;
         height: 100%;
 
+        @media (max-width: 900px) {
+            height: auto;
+            padding: 2rem;
+        }
+
         .certificate {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
@@ -80,10 +96,20 @@ defineProps({
             width: 100%;
             height: 100%;
 
+            @media (max-width: 900px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+            }
+
             .left-container {
                 height: 20rem;
                 overflow: hidden;
                 border-radius: 0.5rem;
+
+                @media (max-width: 900px) {
+                    height: 20rem;
+                    gap: 0.5rem;
+                }
 
                 img {
                     height: 100%;
@@ -93,6 +119,11 @@ defineProps({
 
                     &:hover {
                         transform: scale(1.1);
+                    }
+
+                    @media (max-width: 900px) {
+                        height: 100%;
+                        width: 100%;
                     }
                 }
             }
@@ -108,23 +139,39 @@ defineProps({
                 gap: 1rem;
                 border-radius: 0.5rem;
 
+                @media (max-width: 900px) {
+                    padding: 0.5rem;
+                    gap: 0.5rem;
+                }
+
                 h2 {
                     font-size: var(--text-2xl);
                     color: var(--accent-blue);
+
+                    @media (max-width: 900px) {
+                        font-size: var(--text-xl);
+                    }
                 }
 
                 h3 {
                     font-size: var(--text);
                     color: var(--accent-teal);
+
+                    @media (max-width: 900px) {
+                        font-size: var(--text-sm);
+                    }
                 }
 
                 p {
                     font-size: var(--text-sm);
                     color: var(--text);
                     text-align: center;
+
+                    @media (max-width: 900px) {
+                        font-size: var(--text-xs);
+                        margin-bottom: 2rem;
+                    }
                 }
-
-
             }
         }
     }

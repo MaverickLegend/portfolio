@@ -39,6 +39,13 @@ const languageKey = computed(() => store.current.code);
     grid-template-rows: 1fr 3fr 1fr 2fr;
     gap: 2rem;
     border-radius: 0.3rem;
+    height: 100%;
+    width: 100%;
+
+    @media (max-width: 900px) {
+        grid-template-rows: auto auto auto auto;
+        gap: 1rem;
+    }
 
     .nav {
         grid-area: nav;
@@ -51,6 +58,16 @@ const languageKey = computed(() => store.current.code);
         background-color: var(--primary);
         border-radius: 0.3rem;
 
+        @media (max-width: 1400px) {
+            flex-direction: column;
+            padding: 0.5rem;
+            height: auto;
+        }
+
+        @media (max-width: 1200px) {
+            padding: 0;
+            flex-direction: row;
+        }
 
         .link {
             flex-grow: 1;
@@ -62,6 +79,26 @@ const languageKey = computed(() => store.current.code);
             text-decoration: none;
             transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, letter-spacing ease-in-out 0.3s, background-color ease-in-out 0.3s;
 
+            @media (max-width: 1400px) {
+                width: 100%;
+                font-size: var(--text-sm);
+
+                &:not(:last-child)::after {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 900px) {
+                padding: 0.5rem 0;
+                width: 100%;
+                font-size: var(--text-sm);
+
+                &:not(:last-child)::after {
+                    display: none;
+                }
+
+            }
+
             &:not(:last-child)::after {
                 content: "|";
                 margin-left: 1rem;
@@ -71,7 +108,6 @@ const languageKey = computed(() => store.current.code);
             &:hover {
                 color: var(--accent-teal);
                 letter-spacing: var(--tracking-wider);
-
             }
 
             &.active {
@@ -93,6 +129,5 @@ const languageKey = computed(() => store.current.code);
     .presentation {
         grid-area: presentation;
     }
-
 }
 </style>

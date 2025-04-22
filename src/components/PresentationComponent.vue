@@ -36,6 +36,13 @@ const languageKey = computed(() => store.current.code);
     background-color: var(--primary);
     box-shadow: var(--shadow);
     height: 100%;
+    width: 100%;
+
+    @media (max-width: 900px) {
+        padding: 1rem 0;
+        height: auto;
+        min-height: 10rem;
+    }
 
     .name-container {
         display: flex;
@@ -43,16 +50,27 @@ const languageKey = computed(() => store.current.code);
         align-items: flex-end;
         height: 100%;
 
+        @media (max-width: 900px) {
+            height: auto;
+        }
+
         h1 {
             font-size: 4rem;
             color: var(--accent-teal);
+
+            @media (max-width: 900px) {
+                font-size: 2.5rem;
+            }
         }
 
         h2 {
             font-size: 2rem;
             color: var(--text);
-        }
 
+            @media (max-width: 900px) {
+                font-size: 1.5rem;
+            }
+        }
     }
 
     .alias-container {
@@ -62,14 +80,27 @@ const languageKey = computed(() => store.current.code);
         justify-content: flex-start;
         align-items: center;
 
+        @media (max-width: 900px) {
+            height: auto;
+            margin-top: 0.5rem;
+        }
+
         h3 {
             font-size: 1.5rem;
             color: var(--accent-blue);
+
+            @media (max-width: 900px) {
+                font-size: 1.2rem;
+            }
         }
 
         span {
             font-size: 1rem;
             color: var(--accent-purple);
+
+            @media (max-width: 900px) {
+                font-size: 0.9rem;
+            }
         }
     }
 }

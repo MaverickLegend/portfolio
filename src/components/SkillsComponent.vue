@@ -60,19 +60,36 @@ const skills: Skill[] = [
     width: 100%;
     background-color: var(--primary);
     border-radius: 0.3rem;
+    padding: 1rem 0;
+
+    @media (max-width: 900px) {
+        padding: 0.5rem;
+    }
 
     .skills {
         display: flex;
-        width: 60%;
+        width: 80%;
         align-items: center;
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: center;
 
+        @media (max-width: 900px) {
+            width: 90%;
+            /* Más ancho en móvil */
+            gap: 0.5rem;
+        }
+
         .skill {
             width: 3rem;
             height: 3rem;
             transition: transform 0.4s ease-in-out;
+
+            @media (max-width: 900px) {
+                width: 2.5rem;
+                /* Iconos ligeramente más pequeños en móvil */
+                height: 2.5rem;
+            }
 
             &:hover {
                 transform: scale(1.2);
