@@ -1,13 +1,16 @@
 <template>
   <transition name="swipe">
     <div class="projects-container" :key="languageKey">
-      <h1 class="heading-1">{{ sectionTitle.toUpperCase() }}</h1>
+      <h1 class="section-title">{{ sectionTitle.toUpperCase() }}</h1>
       <swiper :navigation="true" :modules="modules" class="mySwiper">
         <swiper-slide v-for="project in projects" :key="project.title">
           <div class="project-card">
             <div class="project-image">
               <a :href="project.url" target="_blank">
-                <img :src="project.image" :alt="project.title" />
+                <picture>
+                  <source :srcset="project.image" type="image/webp" loading="lazy" />
+                  <img :src="project.image" :alt="project.title" loading="lazy" />
+                </picture>
               </a>
             </div>
             <div class="project-content">
@@ -68,10 +71,8 @@ defineProps({
 .projects-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   color: var(--text);
   overflow: hidden;

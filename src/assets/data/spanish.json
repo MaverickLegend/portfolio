@@ -17,14 +17,14 @@
         "subtitle": "Desarrollador FrontEnd | Vue.js",
         "description": "Certificado de FrontEnd Developer en Javascript y Vue.js, otorgado por Sence Chile.",
         "link": "https://www.acreditta.com/credential/db2c3e10-96ca-4cbd-937f-671e500e2a79",
-        "image": "/assets/img/certificates/sence.png"
+        "image": "/assets/img/certificates/sence.webp"
       },
       {
         "title": "Ef SET",
         "subtitle": "Certificado de Inglés Ef SET C2",
         "description": "Certificado de Inglés C2 otorgado por Ef SET, que acredita un nivel de inglés avanzado.",
         "link": "https://cert.efset.org/qgBeVh",
-        "image": "/assets/img/certificates/efset.png"
+        "image": "/assets/img/certificates/efset.webp"
       }
     ],
     "about": {
@@ -58,7 +58,7 @@
         {
           "title": "Rawg Api",
           "description": "Prueba técnica realizada para el cargo de Desarrollador Frontend, utilizando la API de Rawg.io para mostrar información de videojuegos.",
-          "image": "/assets/img/projects/rawgapi.png",
+          "image": "/assets/img/projects/rawgapi.webp",
           "url": "https://rawg-api-tt.vercel.app",
           "repo": "https://github.com/MaverickLegend/rawg-api-tt",
           "technologies": [
@@ -92,7 +92,7 @@
         {
           "title": "Mi Portafolio",
           "description": "Mi portafolio web hecho con Vue.js, alojado en VPS con Nginx y Docker.",
-          "image": "/assets/img/projects/portfolio.png",
+          "image": "/assets/img/projects/portfolio.webp",
           "url": "https://cristianrojasdev.website",
           "repo": "https://github.com/MaverickLegend/portfolio",
           "technologies": [

@@ -20,11 +20,10 @@
     @media (max-width: 900px) {
         padding: 0;
         height: auto;
-        /* Ajusta la altura automáticamente */
     }
 
     .logo {
-        background-image: url('../../public/assets/img/layout/wizard_logo2.png');
+        background-image: url('/assets/img/layout/wizard_logo2.webp');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;

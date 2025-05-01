@@ -1,13 +1,17 @@
 <template>
     <transition name="swipe">
         <div class="certificates-container" :key="languageKey">
-            <h1 class="heading-1">{{ sectionTitle.toUpperCase() }}</h1>
+            <h1 class="section-title">{{ sectionTitle.toUpperCase() }}</h1>
             <swiper :pagination="{ type: 'fraction' }" :navigation="true" :modules="modules" class="mySwiper">
                 <swiper-slide v-for="certificate in certificates" :key="certificate.title">
                     <div class="certificate">
                         <div class="left-container">
                             <a :href="certificate.link" target="_blank">
-                                <img :src="certificate.image" :alt="certificate.title" />
+                                <picture>
+                                    <source :srcset="certificate.image" type="image/webp" loading="lazy" />
+                                    <img :src="certificate.image" :alt="certificate.title" loading="lazy" />
+                                </picture>
+                                <!-- <img :src="certificate.image" :alt="certificate.title" loading="lazy" /> -->
                             </a>
                         </div>
                         <div class="right-container">
@@ -51,10 +55,8 @@ defineProps({
 .certificates-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
     color: var(--text);
     overflow: hidden;

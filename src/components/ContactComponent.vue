@@ -1,7 +1,7 @@
 <template>
     <transition name="swipe">
         <div class="contact-container" :key="languageKey">
-            <h1 class="heading-1">{{ sectionTitle.toUpperCase() }}</h1>
+            <h1 class="section-title">{{ sectionTitle.toUpperCase() }}</h1>
             <h2>{{ contact.title }}</h2>
         </div>
     </transition>
@@ -30,6 +30,5 @@ defineProps({
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    text-align: center;
 }
 </style>

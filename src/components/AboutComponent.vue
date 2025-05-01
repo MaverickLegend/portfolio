@@ -1,24 +1,25 @@
 <template>
-    <transition name="swipe">
+    <transition name="fade">
         <div class="about-container" :key="languageKey">
-            <h1 class="heading-1">{{ sectionTitle.toUpperCase() }}</h1>
-            <section class="about">
-                <div class="about-presentation">
-                    <h2 class="about-presentation__title">{{ about.title }}</h2>
-                    <span class="about-presentation__intro">{{ about.intro }}</span>
-                    <p class="about__description">
-                        {{ about.description }}
-                    </p>
+            <h1 class="section-title">{{ sectionTitle }}</h1>
+
+            <div class="about-grid">
+                <div class="about-left">
+                    <h2 class="about-title">{{ about.title }}</h2>
+                    <p class="about-intro">{{ about.intro }}</p>
+                    <p class="about-description">{{ about.description }}</p>
                 </div>
-                <div class="about-skills">
-                    <ul class="about-skills__highlights">
-                        <li v-for="point in about.highlights" :key="point">{{ point }}</li>
+
+                <div class="about-right">
+                    <h3 class="highlights-title">Highlights</h3>
+                    <ul class="highlights-list">
+                        <li v-for="point in about.highlights" :key="point">
+                            <span class="highlight-dot"></span>
+                            {{ point }}
+                        </li>
                     </ul>
-                    <blockquote class="about-skills__quote">
-                        <span>“</span>{{ about.quote }}<span>”</span>
-                    </blockquote>
                 </div>
-            </section>
+            </div>
         </div>
     </transition>
 </template>
@@ -36,120 +37,166 @@ defineProps({
         required: true,
     },
 });
-
 </script>
 
 <style lang="scss" scoped>
-@import '../../src/assets/styles/transitions.scss';
-
 .about-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
+    padding: 0.5rem 1.5rem;
+    overflow: hidden;
 
-    .about {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-        overflow-y: auto;
+    .section-title {
+        font-size: 1.8rem;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--accent-teal, #4ecca3);
+        margin-bottom: 1rem;
+        position: relative;
 
-        .about-presentation {
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 120px;
+            height: 1px;
+            background-color: var(--accent-teal, #4ecca3);
+        }
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        height: calc(100% - 3rem);
+        overflow: hidden;
+        place-content: center;
+
+        .about-left {
             display: flex;
             flex-direction: column;
-            gap: 0.1rem;
-            text-align: center;
-            margin-bottom: 2rem;
+            overflow: hidden;
 
-            &__title {
-                color: var(--accent-teal);
+            .about-title {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: var(--accent-purple, #a781ff);
+                margin-bottom: 0.75rem;
             }
 
-            &__intro {
-                color: var(--accent-purple);
+            .about-intro {
+                font-size: 1rem;
                 font-style: italic;
-                position: relative;
-                padding: 0.3rem 0;
-                margin-bottom: 2rem;
+                color: var(--accent-purple, #a781ff);
+                margin-bottom: 1rem;
             }
 
-            .about__description {
-                line-height: 1.5;
-                font-weight: 500;
+            .about-description {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                overflow-y: auto;
+                padding-right: 0.5rem;
+                mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+                text-align: justify;
             }
         }
 
-        .about-skills {
-            &__highlights {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+        .about-right {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+
+            .highlights-title {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: var(--accent-teal, #4ecca3);
+                margin-bottom: 1rem;
+            }
+
+            .highlights-list {
                 list-style: none;
                 padding: 0;
-                margin: 0 0 1rem;
+                margin: 0;
+                overflow-y: auto;
+                padding-right: 0.5rem;
 
                 li {
                     display: flex;
-                    padding-left: 1rem;
-                    position: relative;
-                    margin-bottom: 0.5rem;
-                    color: var(--accent-blue);
+                    align-items: flex-start;
+                    margin-bottom: 0.8rem;
+                    font-size: 0.95rem;
+                    line-height: 1.4;
+                    color: var(--accent-blue, #61dafb);
 
-                    &:before {
-                        content: "•";
-                        color: var(--accent-purple);
-                        position: absolute;
-                        left: 0;
+                    .highlight-dot {
+                        flex-shrink: 0;
+                        display: inline-block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: var(--accent-blue, #61dafb);
+                        border-radius: 50%;
+                        margin-right: 0.75rem;
+                        position: relative;
+                        top: 0.5rem;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 12px;
+                            height: 12px;
+                            border: 1px solid var(--accent-blue, #61dafb);
+                            border-radius: 50%;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            opacity: 0.4;
+                        }
                     }
                 }
-            }
-
-            &__quote {
-                font-size: 0.85rem;
-                font-style: italic;
-                color: var(--accent-purple);
-                padding: 0.6rem;
-                border-left: 2px solid var(--accent-purple);
-                background-color: rgba(var(--accent-purple-rgb, 128, 0, 128), 0.05);
-                margin: 0.5rem 0;
             }
         }
     }
 }
 
-@media (max-width: 640px) or (max-height: 600px) {
-    .about-container {
-        .heading-1 {
-            font-size: 1.2rem;
-        }
+.about-description,
+.highlights-list {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
 
-        .about {
-            .about-presentation {
-                &__title {
-                    font-size: 1rem;
-                }
+    &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+    }
 
-                &__intro {
-                    font-size: 1rem;
-                    margin-bottom: 0.2rem;
-                }
-            }
+    &::-webkit-scrollbar-thumb {
+        background: var(--accent-purple, #a781ff);
+        border-radius: 4px;
+        opacity: 0.6;
+    }
+}
 
-            .about-skills {
-                &__highlights li {
-                    font-size: 1rem;
-                }
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 
-                &__quote {
-                    font-size: 1rem;
-                    text-align: center;
-                }
-            }
-        }
+    .about-description,
+    .highlights-list {
+        max-height: none;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 1.3rem;
     }
 }
 </style>
