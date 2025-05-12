@@ -61,9 +61,9 @@ const skills: Skill[] = [
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0.5rem;
     background-color: var(--primary);
     border-radius: 0.3rem;
+    justify-content: center;
 
     @media (max-width: 900px) {
         padding: 0.5rem;
@@ -78,13 +78,11 @@ const skills: Skill[] = [
         width: 100%;
         padding: 1rem;
         align-items: center;
-        justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: center;
 
         @media (max-width: 900px) {
-            width: 90%;
             gap: 0.5rem;
         }
 

@@ -29,8 +29,7 @@
     ],
     "about": {
       "title": "Software Developer & Sound Technician",
-      "intro": "Where code and sound meet",
-      "description": "I build digital solutions with the same precision I use to tune sound and video systems: detecting noise, iterating, and delivering flawless experiences. I am looking for my first professional opportunity as a software developer. I am very passionate about technology and programming, and I am always looking to deepen my knowledge and improve my skills.",
+      "description": "Building digital solutions with the same precision I use to tune sound and video systems; attention to detail, detecting noise, and delivering flawless experiences. I am currently seeking my first professional opportunity as a software developer. Since I was very young, I have been fascinated by technology and its creative aspects, from the artistic complexity of a video game to the smallest instruction of an electronic device. I feel comfortable solving problems and learning new technologies, always looking to deepen my knowledge, improve my skills, and strengthen mutual support within the team, both from a human and professional perspective.",
       "highlights": [
         "Problem-solving under dynamic and emergent situations",
         "Effective collaboration in multidisciplinary teams",
@@ -39,11 +38,11 @@
       ],
       "quote": "The best technology is invisible; it works so well that you only see the magic happen.",
       "skills_table": {
-        "headers": ["Habilidad", "Experiencia"],
+        "headers": ["Skill", "Experience"],
         "rows": [
-          ["Trabajo bajo presión", "5 años en eventos en vivo"],
-          ["Detalle técnico", "Optimización de código y sistemas"],
-          ["Comunicación clara", "Desde el escenario al desarrollo"]
+          ["Problem-solving under dynamic and emergent situations", "3 years in live events"],
+          ["Technical detail", "Code and system optimization"],
+          ["Clear communication", "From the stage to development"]
         ]
       }
     },

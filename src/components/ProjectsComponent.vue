@@ -72,7 +72,6 @@ defineProps({
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0.5rem;
   border-radius: 0.5rem;
   color: var(--text);
   overflow: hidden;
@@ -81,13 +80,16 @@ defineProps({
 
   @media (max-width: 1200px) {
     padding: 0.5rem;
-    gap: 0;
     height: auto;
   }
 
   .mySwiper {
     width: 100%;
     height: 100%;
+
+    @media (max-width: 1200px) {
+      height: auto;
+    }
 
     .swiper-slide {
       display: flex;
@@ -97,12 +99,16 @@ defineProps({
       width: 100%;
       height: 100%;
 
+
+      @media (max-width: 1200px) {
+        height: auto;
+      }
+
       .project-card {
         display: grid;
         grid-template-columns: 1.3fr 1fr;
         gap: 1.5rem;
         width: 100%;
-        height: 100%;
         border-radius: 0.5rem;
         overflow: hidden;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -110,7 +116,7 @@ defineProps({
         @media (max-width: 1200px) {
           grid-template-columns: 1fr;
           grid-template-rows: 1fr;
-          height: auto;
+          height: 800px;
         }
 
         .project-image {
@@ -118,11 +124,16 @@ defineProps({
           overflow: hidden;
           border-radius: 0.5rem 0 0 0.5rem;
 
+
           img {
             height: 100%;
             width: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
+
+            @media (max-width: 1200px) {              
+              object-fit: cover;
+            }
           }
 
           &:hover img {

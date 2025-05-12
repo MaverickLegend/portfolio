@@ -17,7 +17,7 @@
     height: 100%;
     width: 100%;
 
-    @media (max-width: 900px) {
+    @media (max-width: 1200px) {
         padding: 0;
         height: auto;
     }
@@ -27,12 +27,12 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 15rem;
-        height: 15rem;
+        width: 18rem;
+        height: 18rem;
 
-        @media (max-width: 900px) {
-            width: 10rem;
-            height: 10rem;
+        @media (max-width: 1200px) {
+            width: 20rem;
+            height: 20rem;
         }
     }
 }

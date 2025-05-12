@@ -29,19 +29,17 @@
     ],
     "about": {
       "title": "Desarrollador de Software & Técnico en Sonido",
-      "intro": "Donde código y sonido se encuentran",
-      "description": "Construyo soluciones digitales con la misma precisión con que afino sistemas de sonido y video: detectando ruido, iterando y entregando experiencias impecables. En búsqueda de mi primera oportunidad profesional como desarrollador de software. Soy muy apasionado por la tecnología y la programación, y siempre estoy buscando profundizar mis conocimientos y mejorar mis habilidades.",
+      "description": "Construyo soluciones digitales con la misma precisión con que afino sistemas de sonido y video; atención al detalle, detectando ruido y entregando experiencias impecables. Actualmente me encuentro en búsqueda de mi primera oportunidad profesional como desarrollador de software. Desde muy pequeño me vi encantado con la tecnología y su ámbito creativo, desde la complejidad artística que significa un videojuego hasta la más mínima instrucción de un aparato electrónico. Me siento cómodo resolviendo problemas y aprendiendo nuevas tecnologías, siempre buscando profundizar mis conocimientos, mejorar mis habilidades y fortalecer el apoyo mutuo en el equipo de trabajo, tanto desde el ámbito humano como profesional.",
       "highlights": [
         "Resolución de problemas bajo situaciones dinámicas y emergentes",
         "Colaboración efectiva en equipos multidisciplinarios",
         "Aprendizaje continuo y curiosidad técnica",
         "Capacidad de adaptación a nuevas tecnologías y entornos"
       ],
-      "quote": "La mejor tecnología es invisible; funciona tan bien que solo ves la magia ocurrir.",
       "skills_table": {
         "headers": ["Habilidad", "Experiencia"],
         "rows": [
-          ["Trabajo bajo presión", "5 años en eventos en vivo"],
+          ["Trabajo bajo situaciones dinámicas y emergentes", "3 años en eventos en vivo"],
           ["Detalle técnico", "Optimización de código y sistemas"],
           ["Comunicación clara", "Desde el escenario al desarrollo"]
         ]

@@ -42,7 +42,7 @@ const languageKey = computed(() => store.current.code);
     height: 100%;
     width: 100%;
 
-    @media (max-width: 900px) {
+    @media (max-width: 1200px) {
         grid-template-rows: auto auto auto auto;
         gap: 1rem;
     }
@@ -65,7 +65,7 @@ const languageKey = computed(() => store.current.code);
         }
 
         @media (max-width: 1200px) {
-            padding: 0;
+            padding: 1rem 0;
             flex-direction: row;
         }
 

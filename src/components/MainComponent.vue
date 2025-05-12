@@ -54,7 +54,7 @@ const sectionTitle = computed(() => {
     gap: 2rem;
     width: 100%;
     height: 100vh;
-    max-width: 1600px;
+    max-width: 1800px;
     min-height: 100vh;
     max-height: 100vh;
     padding: 3rem;
