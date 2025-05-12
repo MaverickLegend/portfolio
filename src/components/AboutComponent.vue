@@ -162,7 +162,11 @@ defineProps({
         .about-right {
             display: flex;
             flex-direction: column;
-            overflow: auto;
+            overflow: hidden;
+
+            @media (max-width: 1400px) {
+                overflow: auto;
+            }
 
             .skills-section {
                 .skills-title {
