@@ -116,13 +116,17 @@ defineProps({
         @media (max-width: 1200px) {
           grid-template-columns: 1fr;
           grid-template-rows: 1fr;
-          height: 800px;
+          height: auto;
         }
 
         .project-image {
           height: 100%;
           overflow: hidden;
           border-radius: 0.5rem 0 0 0.5rem;
+
+          @media (max-width: 900px) {
+            display: none;
+          }
 
 
           img {
@@ -131,7 +135,7 @@ defineProps({
             object-fit: cover;
             transition: transform 0.5s ease;
 
-            @media (max-width: 1200px) {              
+            @media (max-width: 1200px) {
               object-fit: cover;
             }
           }

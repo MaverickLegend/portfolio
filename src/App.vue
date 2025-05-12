@@ -6,12 +6,10 @@ const showIntro = ref(true);
 const logoOpacity = ref(0);
 
 onMounted(() => {
-  // Aparecer gradualmente el logo
   setTimeout(() => {
     logoOpacity.value = 1;
   }, 100);
 
-  // Desvanecer y mostrar el contenido principal
   setTimeout(() => {
     showIntro.value = false;
   }, 2000);
@@ -24,7 +22,6 @@ onMounted(() => {
       <div v-if="showIntro" class="intro-screen">
         <div class="logo" :style="{ opacity: logoOpacity }">
           <h1>MaverickLegend</h1>
-          <!-- <h1>Portfolio</h1> -->
         </div>
       </div>
     </transition>
@@ -70,6 +67,7 @@ body {
   @media (max-width: 900px) {
     align-items: flex-start;
     padding: 1rem 0;
+    background-attachment: scroll;
   }
 }
 
@@ -94,6 +92,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: auto;
+  flex-wrap: wrap;
 }
 
 .logo {

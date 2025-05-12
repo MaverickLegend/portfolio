@@ -29,11 +29,6 @@
         background-position: center;
         width: 18rem;
         height: 18rem;
-
-        @media (max-width: 1200px) {
-            width: 20rem;
-            height: 20rem;
-        }
     }
 }
 </style>

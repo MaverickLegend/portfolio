@@ -11,10 +11,9 @@
                                     <source :srcset="certificate.image" type="image/webp" loading="lazy" />
                                     <img :src="certificate.image" :alt="certificate.title" loading="lazy" />
                                 </picture>
-                                <!-- <img :src="certificate.image" :alt="certificate.title" loading="lazy" /> -->
                             </a>
                         </div>
-                        <div class="right-container">
+                        <div class="right-container" v-on:click="goLink(certificate.link)">
                             <h2>{{ certificate.title }}</h2>
                             <h3>{{ certificate.subtitle }}</h3>
                             <p>{{ certificate.description }}</p>
@@ -45,6 +44,10 @@ defineProps({
         required: true,
     },
 });
+
+const goLink = (link: string) => {
+    window.open(link, '_blank');
+}
 
 </script>
 
@@ -110,6 +113,7 @@ defineProps({
                 @media (max-width: 900px) {
                     height: 20rem;
                     gap: 0.5rem;
+                    display: none;
                 }
 
                 img {
@@ -143,6 +147,10 @@ defineProps({
                 @media (max-width: 900px) {
                     padding: 0.5rem;
                     gap: 0.5rem;
+
+                    :hover {
+                        cursor: pointer;
+                    }
                 }
 
                 h2 {

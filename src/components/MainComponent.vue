@@ -3,9 +3,9 @@
         <div class="wrapper" :key="setThemeTransition">
             <div class="home">
                 <transition name="swipe" mode="out-in">
-                    <div class="content" :key="languageKey">
+                    <div class="content" :key="languageKey" ref="contentRef">
                         <router-view v-slot="{ Component }">
-                            <transition name="fade-slide" mode="out-in">
+                            <transition name="fade-slide" mode="out-in" @after-enter="handleAfterEnter">
                                 <component :is="Component" :key="$route.path" :sectionTitle="sectionTitle" />
                             </transition>
                         </router-view>
@@ -17,12 +17,12 @@
         </div>
     </transition>
 </template>
-<script setup lang="ts">
 
+<script setup lang="ts">
 import NavbarComponent from './NavbarComponent.vue';
 import SkillsComponent from './SkillsComponent.vue';
 import { useLanguageStore } from '../stores/useLanguageStore';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useThemeStore } from '../stores/useThemeStore';
 import { useRoute } from 'vue-router';
 
@@ -32,11 +32,25 @@ const setThemeTransition = computed(() => storeTheme.theme);
 const languageKey = computed(() => store.current.code);
 const sections = computed(() => store.sections);
 const route = useRoute();
+const contentRef = ref<HTMLDivElement | null>(null);
+
 const sectionTitle = computed(() => {
     const section = sections.value.find(section => section.url === route.path);
     return section?.name;
 });
 
+const handleAfterEnter = () => {
+    if (window.innerWidth <= 900 && contentRef.value) {
+        setTimeout(() => {
+            if (contentRef.value) {
+                contentRef.value.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 100);
+    }
+};
 </script>
 
 <style scoped lang="scss">
