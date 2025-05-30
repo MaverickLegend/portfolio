@@ -16,6 +16,9 @@
     padding-left: 1rem;
     height: 100%;
     width: 100%;
+    border-radius: 0.3rem;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
 
     @media (max-width: 1200px) {
         padding: 0;
@@ -27,8 +30,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 18rem;
-        height: 18rem;
+        width: 15rem;
+        height: 15rem;
     }
 }
 </style>

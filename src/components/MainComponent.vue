@@ -13,7 +13,6 @@
                 </transition>
             </div>
             <NavbarComponent class="nav" :languageKey="languageKey" />
-            <SkillsComponent class="skills" />
         </div>
     </transition>
 </template>
@@ -61,17 +60,17 @@ const handleAfterEnter = () => {
 .wrapper {
     display: grid;
     grid-template-areas:
-        "home nav"
-        "skills nav";
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
+        "nav home"
+        "nav home";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
     gap: 2rem;
     width: 100%;
     height: 100vh;
     max-width: 1800px;
     min-height: 100vh;
     max-height: 100vh;
-    padding: 3rem;
+    padding: 2rem;
     overflow: hidden;
 
     @media (max-width: 1200px) {
@@ -113,6 +112,7 @@ const handleAfterEnter = () => {
             width: 100%;
             height: 100%;
             overflow: hidden;
+            border-left: 0.5rem solid var(--accent-teal);
 
             @media (max-width: 900px) {
                 padding: 0.5rem;

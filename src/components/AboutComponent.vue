@@ -61,12 +61,16 @@ defineProps({
     flex-direction: column;
     width: 100%;
     height: 100%;
+    gap: 1rem;
+    padding-bottom: 1rem;
     overflow: auto;
 
 
     .about-top {
+        padding: 1rem;
+
         .about-title {
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             font-weight: 400;
             color: var(--accent-purple, #a781ff);
             margin-bottom: 0.75rem;
@@ -87,14 +91,13 @@ defineProps({
             text-align: justify;
             margin-bottom: 1.5rem;
         }
-
     }
 
     .about-grid {
+        padding: 0 1rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1rem;
-        height: calc(100% - 3rem);
         place-content: center;
         overflow: auto;
 

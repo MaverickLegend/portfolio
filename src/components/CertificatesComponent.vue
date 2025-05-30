@@ -1,26 +1,24 @@
 <template>
     <transition name="swipe">
-        <div class="certificates-container" :key="languageKey">
+        <div class="container" :key="languageKey">
             <h1 class="section-title">{{ sectionTitle.toUpperCase() }}</h1>
-            <swiper :pagination="{ type: 'fraction' }" :navigation="true" :modules="modules" class="mySwiper">
-                <swiper-slide v-for="certificate in certificates" :key="certificate.title">
-                    <div class="certificate">
-                        <div class="left-container">
-                            <a :href="certificate.link" target="_blank">
-                                <picture>
-                                    <source :srcset="certificate.image" type="image/webp" loading="lazy" />
-                                    <img :src="certificate.image" :alt="certificate.title" loading="lazy" />
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="right-container" v-on:click="goLink(certificate.link)">
-                            <h2>{{ certificate.title }}</h2>
-                            <h3>{{ certificate.subtitle }}</h3>
-                            <p>{{ certificate.description }}</p>
-                        </div>
+            <div class="certificate-container">
+                <div class="certificate" v-for="certificate in certificates" :key="certificate.title">
+                    <div class="left-container">
+                        <a :href="certificate.link" target="_blank">
+                            <picture>
+                                <source :srcset="certificate.image" type="image/webp" loading="lazy" />
+                                <img :src="certificate.image" :alt="certificate.title" loading="lazy" />
+                            </picture>
+                        </a>
                     </div>
-                </swiper-slide>
-            </swiper>
+                    <div class="right-container" v-on:click="goLink(certificate.link)">
+                        <h2>{{ certificate.title }}</h2>
+                        <h3>{{ certificate.subtitle }}</h3>
+                        <p>{{ certificate.description }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </transition>
 </template>
@@ -28,8 +26,6 @@
 <script setup lang="ts">
 import { useLanguageStore } from '../stores/useLanguageStore';
 import { computed } from 'vue';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -37,7 +33,6 @@ import 'swiper/css/navigation';
 const store = useLanguageStore();
 const certificates = computed(() => store.certificates);
 const languageKey = computed(() => store.current.code);
-const modules = [Pagination, Navigation];
 defineProps({
     sectionTitle: {
         type: String,
@@ -55,7 +50,7 @@ const goLink = (link: string) => {
 @import '../../src/assets/styles/transitions.scss';
 @import '../../src/assets/styles/themes.scss';
 
-.certificates-container {
+.container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -70,31 +65,25 @@ const goLink = (link: string) => {
         height: auto;
     }
 
-    .mySwiper {
+    .certificate-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
         width: 100%;
         height: 100%;
+        place-content: center;
+        padding: 0 1rem;
 
         @media (max-width: 900px) {
-            height: auto;
-        }
-    }
-
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.5rem;
-        width: 100%;
-        height: 100%;
-
-        @media (max-width: 900px) {
-            height: auto;
-            padding: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            padding: 0.5rem;
         }
 
         .certificate {
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
             place-content: center;
             gap: 1rem;
             width: 100%;
@@ -183,6 +172,7 @@ const goLink = (link: string) => {
                 }
             }
         }
+
     }
 }
 </style>

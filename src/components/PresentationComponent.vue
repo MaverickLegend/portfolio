@@ -42,6 +42,7 @@ const languageKey = computed(() => store.current.code);
         padding: 1rem 0;
         height: auto;
         min-height: 10rem;
+        justify-content: center;
     }
 
     .name-container {
@@ -55,20 +56,11 @@ const languageKey = computed(() => store.current.code);
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 2rem;
             color: var(--accent-teal);
 
             @media (max-width: 900px) {
                 font-size: 2.5rem;
-            }
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: var(--text);
-
-            @media (max-width: 900px) {
-                font-size: 1.5rem;
             }
         }
     }
@@ -86,7 +78,7 @@ const languageKey = computed(() => store.current.code);
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: var(--accent-blue);
 
             @media (max-width: 900px) {
@@ -99,7 +91,7 @@ const languageKey = computed(() => store.current.code);
             color: var(--accent-purple);
 
             @media (max-width: 900px) {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
         }
     }

@@ -58,10 +58,14 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url('/assets/img/layout/Leonardo_Phoenix_09_A_mesmerizing_highresolution_outer_spacein_3.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)),
+    url('/assets/img/layout/Leonardo_Phoenix_09_A_mesmerizing_highresolution_outer_spacein_3.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: #000;
   overflow-y: auto;
 
   @media (max-width: 900px) {

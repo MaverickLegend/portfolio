@@ -2,6 +2,7 @@
     <div class="navbar-container">
         <ButtonsComponent class="buttons" />
         <NameComponent class="presentation" />
+        <LogoComponent class="logo" />
         <transition name="disolve" mode="out-in">
             <nav class="nav" :key="languageKey">
                 <router-link v-for="(section, index) in sections" :key="index" :to=section.url class="link"
@@ -10,18 +11,18 @@
                 </router-link>
             </nav>
         </transition>
-        <LogoComponent class="logo" />
+        <SkillsComponent class="skill" />
     </div>
 </template>
 
 <script setup lang="ts">
 
 import ButtonsComponent from './ButtonsComponent.vue';
-import LogoComponent from './LogoComponent.vue';
 import NameComponent from './PresentationComponent.vue';
 import { computed } from 'vue';
 import { useLanguageStore } from '../stores/useLanguageStore';
-
+import SkillsComponent from './SkillsComponent.vue';
+import LogoComponent from './LogoComponent.vue';
 const store = useLanguageStore();
 const sections = computed(() => store.sections);
 const languageKey = computed(() => store.current.code);
@@ -32,12 +33,13 @@ const languageKey = computed(() => store.current.code);
 .navbar-container {
     display: grid;
     grid-template-areas:
-        "buttons"
-        "presentation"
-        "nav"
-        "logo";
-    grid-template-rows: 1fr 3fr 1fr 2fr;
-    gap: 2rem;
+        "buttons buttons"
+        "presentation logo"
+        "nav nav"
+        "skill skill";
+    grid-template-rows: 1fr 3fr 0.5fr 4fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
     border-radius: 0.3rem;
     height: 100%;
     width: 100%;
@@ -49,24 +51,23 @@ const languageKey = computed(() => store.current.code);
 
     .nav {
         grid-area: nav;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-content: center;
         height: 3rem;
-        justify-content: space-between;
-        align-items: center;
         padding: 1rem;
         box-shadow: var(--shadow);
         background-color: var(--primary);
         border-radius: 0.3rem;
 
         @media (max-width: 1400px) {
-            flex-direction: column;
             padding: 0.5rem;
             height: auto;
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 900px) {
             padding: 1rem 0;
-            flex-direction: row;
+            grid-template-columns: 1fr;
         }
 
         .link {
@@ -99,11 +100,11 @@ const languageKey = computed(() => store.current.code);
 
             }
 
-            &:not(:last-child)::after {
-                content: "|";
-                margin-left: 1rem;
-                color: var(--accent-blue);
-            }
+            //&:not(:last-child)::after {
+            //content: "|";
+            //margin: 2rem;
+            //color: var(--accent-blue);
+            //}
 
             &:hover {
                 color: var(--accent-teal);
@@ -128,6 +129,10 @@ const languageKey = computed(() => store.current.code);
 
     .presentation {
         grid-area: presentation;
+    }
+
+    .skill {
+        grid-area: skill;
     }
 }
 </style>
