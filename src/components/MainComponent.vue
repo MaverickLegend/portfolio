@@ -19,7 +19,6 @@
 
 <script setup lang="ts">
 import NavbarComponent from './NavbarComponent.vue';
-import SkillsComponent from './SkillsComponent.vue';
 import { useLanguageStore } from '../stores/useLanguageStore';
 import { computed, ref } from 'vue';
 import { useThemeStore } from '../stores/useThemeStore';
