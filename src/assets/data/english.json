@@ -3,13 +3,13 @@
   "name": "English",
   "code": "en",
   "icon": "us",
-  "cv": "/assets/files/CVCristiánRojasDev2025English.pdf",
+  "cv": "/assets/files/CVCristiánRojasDev2026_ENG_V2.pdf",
   "content": {
     "presentation": {
       "hello": "Hello, I am",
       "name": "Cristián Rojas",
       "alias": "MaverickLegend",
-      "webdeveloper": "Front-end web developer"
+      "webdeveloper": "Fullstack developer"
     },
     "certificates": [
       {
@@ -29,18 +29,20 @@
     ],
     "about": {
       "title": "Software Developer & Sound Technician",
-      "description": "Building digital solutions with the same precision I use to tune sound and video systems; attention to detail, detecting noise, and delivering flawless experiences. I am currently seeking my first professional opportunity as a software developer. Since I was very young, I have been fascinated by technology and its creative aspects, from the artistic complexity of a video game to the smallest instruction of an electronic device. I feel comfortable solving problems and learning new technologies, always looking to deepen my knowledge, improve my skills, and strengthen mutual support within the team, both from a human and professional perspective.",
+      "description": "FullStack Developer specialized in the TypeScript ecosystem, with solid experience building scalable applications with NestJS on the backend and modern architectures in Vue.js and React. Focused on delivering clean and typed code, with demonstrated ability to optimize complex processes and solve business problems under pressure. Building digital solutions with the same precision I use to tune sound and video systems; attention to detail, detecting noise, and delivering flawless experiences. Since I was very young, I have been fascinated by technology and its creative aspects, from the artistic complexity of a video game to the smallest instruction of an electronic device. I feel comfortable solving problems and learning new technologies, always looking to deepen my knowledge, improve my skills, and strengthen mutual support within the team.",
       "highlights": [
         "Problem-solving under dynamic and emergent situations",
         "Effective collaboration in multidisciplinary teams",
         "Continuous learning and technical curiosity",
         "Ability to adapt to new technologies and environments"
       ],
-      "quote": "The best technology is invisible; it works so well that you only see the magic happen.",
       "skills_table": {
         "headers": ["Skill", "Experience"],
         "rows": [
-          ["Problem-solving under dynamic and emergent situations", "3 years in live events"],
+          [
+            "Problem-solving under dynamic and emergent situations",
+            "3 years in live events"
+          ],
           ["Technical detail", "Code and system optimization"],
           ["Clear communication", "From the stage to development"]
         ]
@@ -49,11 +51,143 @@
     "skills": {
       "title": "Skills"
     },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "year": "2025",
+          "company": "GigLogic",
+          "position": "FullStack Developer",
+          "type": "Personal Project",
+          "description": "Comprehensive solution (SaaS) designed to optimize logistics and production in the large-scale events industry.",
+          "technologies": [
+            "NestJS",
+            "PostgreSQL",
+            "React",
+            "TypeScript",
+            "Docker"
+          ],
+          "achievements": [
+            "Backend: Scalable architecture with NestJS and PostgreSQL, optimizing inventory flows and schedules.",
+            "Frontend: Reactive interface in React + TypeScript, prioritizing type safety and maintainability.",
+            "DevOps: Containerization with Docker to ensure environment parity and efficient deployments."
+          ],
+          "status": "In Development"
+        },
+        {
+          "year": "2025",
+          "company": "LatLong",
+          "position": "Freelance Developer",
+          "type": "Freelance",
+          "description": "Development of fullstack solutions for agricultural technology projects and process optimization.",
+          "technologies": [
+            "Django",
+            "Vue.js",
+            "TypeScript",
+            "Python",
+            "Pandas"
+          ],
+          "achievements": [
+            "Fullstack development of an agro-solar calculator, implementing a REST API with Django REST Framework (DRF) on the backend and a dynamic interface with Vue.js and TypeScript on the frontend.",
+            "Refactored and optimized an ETL module with Python and Pandas, achieving a 70% reduction in execution time and automating critical flows."
+          ]
+        },
+        {
+          "year": "2025",
+          "company": "Mapa La Chispa Digital",
+          "position": "Frontend Developer",
+          "type": "Professional Internship",
+          "description": "Development of interactive geographic visualization application for national data.",
+          "technologies": ["React", "TypeScript", "Leaflet"],
+          "achievements": [
+            "Development of national interactive map using React, TypeScript and Leaflet with georeferenced data visualization."
+          ]
+        },
+        {
+          "year": "2021 - 2024",
+          "company": "Live Events",
+          "position": "Audio and Video Technician",
+          "type": "Freelance",
+          "description": "Technical management of audio and video systems in corporate and large-scale events.",
+          "technologies": [],
+          "achievements": [
+            "Work under dynamic and emergent situations in live events",
+            "Real-time technical problem solving",
+            "Coordination with multidisciplinary teams"
+          ]
+        }
+      ]
+    },
     "projects": {
       "title": "Projects",
       "viewProject": "View project",
       "viewCode": "View code",
       "items": [
+        {
+          "title": "GigLogic",
+          "description": "SaaS designed to optimize logistics and production in the large-scale events industry. Comprehensive inventory management system, schedules and resources.",
+          "image": "/assets/img/projects/tinySA-wwb.png",
+          "url": "",
+          "repo": "",
+          "status": "🚀 In Development",
+          "technologies": [
+            {
+              "title": "NestJS",
+              "icon": "skill-icons:nestjs-light",
+              "color": "#E0234E"
+            },
+            {
+              "title": "PostgreSQL",
+              "icon": "skill-icons:postgresql-light",
+              "color": "#336791"
+            },
+            {
+              "title": "React",
+              "icon": "skill-icons:react-light",
+              "color": "#61DAFB"
+            },
+            {
+              "title": "TypeScript",
+              "icon": "skill-icons:typescript",
+              "color": "#3178c6"
+            },
+            {
+              "title": "Docker",
+              "icon": "skill-icons:docker",
+              "color": "#2496ED"
+            }
+          ]
+        },
+        {
+          "title": "Agro-Solar Calculator",
+          "description": "Fullstack application for efficiency calculations in solar panel installations for agriculture. REST API with Django and interactive frontend with Vue.js.",
+          "image": "/assets/img/projects/tinySA-wwb.png",
+          "url": "",
+          "repo": "",
+          "privateProject": true,
+          "technologies": [
+            {
+              "title": "Django",
+              "icon": "skill-icons:django",
+              "color": "#092E20"
+            },
+            {
+              "title": "Vue.js",
+              "icon": "skill-icons:vuejs-light",
+              "color": "#42b883"
+            },
+            {
+              "title": "TypeScript",
+              "icon": "skill-icons:typescript",
+              "color": "#3178c6"
+            },
+            {
+              "title": "Python",
+              "icon": "skill-icons:python-light",
+              "color": "#3776AB"
+            }
+          ]
+        },
         {
           "title": "Rawg Api",
           "description": "A technical test for frontend job consisting in a web application that consumes the Rawg API to display a list of games and their details.",
@@ -89,14 +223,14 @@
           ]
         },
         {
-          "title": "My Portfolio",
-          "description": "A personal portfolio built with Vue js, hosted on a VPS with Nginx and Docker.",
-          "image": "/assets/img/projects/portfolio.webp",
+          "title": "TinySA CSV to WWB",
+          "description": "Web application to convert CSV files generated by the TinySA spectrum analyzer to a format compatible with Wireless Workbench by SHURE, one of the leading software in the radio frequency industry. Specialized tool for audio technicians in RF spectrum management.",
+          "image": "/assets/img/projects/tinySA-wwb.webp",
           "url": "https://cristianrojasdev.website",
           "repo": "https://github.com/MaverickLegend/portfolio",
           "technologies": [
             {
-              "title": "Vue",
+              "title": "Vue.js",
               "icon": "skill-icons:vuejs-light",
               "color": "#42b883"
             },
@@ -106,24 +240,9 @@
               "color": "#3178c6"
             },
             {
-              "title": "Pinia",
-              "icon": "skill-icons:pinia-light",
-              "color": "#ffda44"
-            },
-            {
-              "title": "SCSS",
-              "icon": "skill-icons:sass",
-              "color": "#cc6699"
-            },
-            {
-              "title": "Docker",
-              "icon": "skill-icons:docker",
-              "color": "#2496ED"
-            },
-            {
-              "title": "Nginx",
-              "icon": "skill-icons:nginx",
-              "color": "#009639"
+              "title": "Rust",
+              "icon": "skill-icons:rust",
+              "color": "#000000"
             }
           ]
         }
@@ -164,16 +283,21 @@
       },
       {
         "id": 2,
+        "name": "Experience",
+        "url": "/experience"
+      },
+      {
+        "id": 3,
         "name": "About",
         "url": "/about"
       },
       {
-        "id": 3,
+        "id": 4,
         "name": "Certificates",
         "url": "/certificates"
       },
       {
-        "id": 4,
+        "id": 5,
         "name": "Contact",
         "url": "/contact"
       }

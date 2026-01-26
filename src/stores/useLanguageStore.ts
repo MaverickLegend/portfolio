@@ -19,6 +19,7 @@ export const useLanguageStore = defineStore("language", {
     certificates: (state) => state.current.content.certificates,
     skills: (state) => state.current.content.skills,
     about: (state) => state.current.content.about,
+    experience: (state) => state.current.content.experience,
     contact: (state) => state.current.content.contact,
     cv: (state) => state.current.cv,
   },

@@ -1,6 +1,6 @@
 <template>
     <transition name="disolve" mode="out-in">
-        <div class="wrapper" :key="setThemeTransition">
+        <div class="wrapper">
             <div class="home">
                 <transition name="swipe" mode="out-in">
                     <div class="content" :key="languageKey" ref="contentRef">
@@ -21,12 +21,9 @@
 import NavbarComponent from './NavbarComponent.vue';
 import { useLanguageStore } from '../stores/useLanguageStore';
 import { computed, ref } from 'vue';
-import { useThemeStore } from '../stores/useThemeStore';
 import { useRoute } from 'vue-router';
 
 const store = useLanguageStore();
-const storeTheme = useThemeStore();
-const setThemeTransition = computed(() => storeTheme.theme);
 const languageKey = computed(() => store.current.code);
 const sections = computed(() => store.sections);
 const route = useRoute();

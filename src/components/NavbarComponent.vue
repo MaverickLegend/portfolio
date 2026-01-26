@@ -52,7 +52,7 @@ const languageKey = computed(() => store.current.code);
     .nav {
         grid-area: nav;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(5, 1fr);
         place-content: center;
         height: 3rem;
         padding: 1rem;

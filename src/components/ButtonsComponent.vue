@@ -9,12 +9,12 @@
             </div>
         </div>
         <div class="toggle-container">
-            <div class="theme-btn">
+            <!-- <div class="theme-btn">
                 <div class="toggle-btn" @click="toggleTheme">
                     <Icon icon="stash:moon-solid" v-if="themeStore.theme === 'light'" />
                     <Icon icon="stash:sun-solid" v-else />
                 </div>
-            </div>
+            </div> -->
             <div class="lang-btn">
                 <div class="toggle-btn" @click="toggleLanguage">
                     <Icon icon="openmoji:flag-united-kingdom" v-if="isLangChecked" />
@@ -28,7 +28,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { useLanguageStore } from '../stores/useLanguageStore'
-import { useThemeStore } from '../stores/useThemeStore';
 import { Icon } from '@iconify/vue/dist/iconify.js';
 
 
@@ -44,11 +43,6 @@ const toggleLanguage = () => {
 
 const handleLink = (link: string) => {
     window.open(link, '_blank');
-};
-
-const themeStore = useThemeStore();
-const toggleTheme = () => {
-    themeStore.toggleTheme();
 };
 
 const cv = computed(() => store.cv)

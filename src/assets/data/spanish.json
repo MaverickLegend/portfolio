@@ -3,13 +3,13 @@
   "name": "Español",
   "code": "es",
   "icon": "es",
-  "cv": "/assets/files/CVCristiánRojasDev2025Spanish.pdf",
+  "cv": "/assets/files/CVCristiánRojasDev2026_ESP_V2.pdf",
   "content": {
     "presentation": {
       "hello": "Hola, soy",
       "name": "Cristián Rojas",
       "alias": "MaverickLegend",
-      "webdeveloper": "Desarrollador web Front-end"
+      "webdeveloper": "Desarrollador web Fullstack"
     },
     "certificates": [
       {
@@ -29,7 +29,7 @@
     ],
     "about": {
       "title": "Desarrollador de Software & Técnico en Sonido",
-      "description": "Construyo soluciones digitales con la misma precisión con que afino sistemas de sonido y video; atención al detalle, detectando ruido y entregando experiencias impecables. Actualmente me encuentro en búsqueda de mi primera oportunidad profesional como desarrollador de software. Desde muy pequeño me vi encantado con la tecnología y su ámbito creativo, desde la complejidad artística que significa un videojuego hasta la más mínima instrucción de un aparato electrónico. Me siento cómodo resolviendo problemas y aprendiendo nuevas tecnologías, siempre buscando profundizar mis conocimientos, mejorar mis habilidades y fortalecer el apoyo mutuo en el equipo de trabajo, tanto desde el ámbito humano como profesional.",
+      "description": "Desarrollador FullStack especializado en el ecosistema TypeScript, con experiencia sólida construyendo aplicaciones escalables con NestJS en el backend y arquitecturas modernas en Vue.js y React. Enfocado en la entrega de código limpio y tipado, con capacidad demostrada para optimizar procesos complejos y resolver problemas de negocio bajo presión. Construyo soluciones digitales con la misma precisión con que afino sistemas de sonido y video; atención al detalle, detectando ruido y entregando experiencias impecables. Desde muy pequeño me vi encantado con la tecnología y su ámbito creativo, desde la complejidad artística que significa un videojuego hasta la más mínima instrucción de un aparato electrónico. Me siento cómodo resolviendo problemas y aprendiendo nuevas tecnologías, siempre buscando profundizar mis conocimientos, mejorar mis habilidades y fortalecer el apoyo mutuo en el equipo de trabajo.",
       "highlights": [
         "Resolución de problemas bajo situaciones dinámicas y emergentes",
         "Colaboración efectiva en equipos multidisciplinarios",
@@ -48,11 +48,131 @@
     "skills": {
       "title": "Habilidades"
     },
+    "experience": {
+      "title": "Experiencia",
+      "items": [
+        {
+          "year": "2025",
+          "company": "GigLogic",
+          "position": "Desarrollador FullStack",
+          "type": "Proyecto Personal",
+          "description": "Solución integral (SaaS) diseñada para optimizar la logística y producción en la industria de eventos a gran escala.",
+          "technologies": ["NestJS", "PostgreSQL", "React", "TypeScript", "Docker"],
+          "achievements": [
+            "Backend: Arquitectura escalable con NestJS y PostgreSQL, optimizando flujos de inventario y cronogramas.",
+            "Frontend: Interfaz reactiva en React + TypeScript, priorizando la seguridad de tipos y mantenibilidad.",
+            "DevOps: Containerización con Docker para asegurar paridad de entornos y despliegues eficientes."
+          ],
+          "status": "En Desarrollo"
+        },
+        {
+          "year": "2025",
+          "company": "LatLong",
+          "position": "Desarrollador Freelance",
+          "type": "Freelance",
+          "description": "Desarrollo de soluciones fullstack para proyectos de tecnología agrícola y optimización de procesos.",
+          "technologies": ["Django", "Vue.js", "TypeScript", "Python", "Pandas"],
+          "achievements": [
+            "Desarrollo fullstack de una calculadora agrosolar, implementando una API REST con Django REST Framework (DRF) en el backend y una interfaz dinámica con Vue.js y TypeScript en el frontend.",
+            "Refactoricé y optimicé un módulo ETL con Python y Pandas, logrando una reducción del 70% en el tiempo de ejecución y automatizando flujos críticos."
+          ]
+        },
+        {
+          "year": "2025",
+          "company": "Mapa La Chispa Digital",
+          "position": "Desarrollador Frontend",
+          "type": "Práctica Profesional",
+          "description": "Desarrollo de aplicación de visualización geográfica interactiva para datos nacionales.",
+          "technologies": ["React", "TypeScript", "Leaflet"],
+          "achievements": [
+            "Desarrollo de mapa interactivo nacional usando React, TypeScript y Leaflet con visualización de datos georreferenciados."
+          ]
+        },
+        {
+          "year": "2021 - 2024",
+          "company": "Eventos en Vivo",
+          "position": "Técnico de Audio y Video",
+          "type": "Freelance",
+          "description": "Gestión técnica de sistemas de audio y video en eventos corporativos y de gran escala.",
+          "technologies": [],
+          "achievements": [
+            "Trabajo bajo situaciones dinámicas y emergentes en eventos en vivo",
+            "Resolución de problemas técnicos en tiempo real",
+            "Coordinación con equipos multidisciplinarios"
+          ]
+        }
+      ]
+    },
     "projects": {
       "title": "Proyectos",
       "viewProject": "Ver proyecto",
       "viewCode": "Ver código",
       "items": [
+        {
+          "title": "GigLogic",
+          "description": "SaaS diseñado para optimizar la logística y producción en la industria de eventos a gran escala. Sistema integral de gestión de inventario, cronogramas y recursos.",
+          "image": "/assets/img/projects/giglogic.webp",
+          "url": "",
+          "repo": "",
+          "status": "🚀 En Desarrollo",
+          "technologies": [
+            {
+              "title": "NestJS",
+              "icon": "skill-icons:nestjs-light",
+              "color": "#E0234E"
+            },
+            {
+              "title": "PostgreSQL",
+              "icon": "skill-icons:postgresql-light",
+              "color": "#336791"
+            },
+            {
+              "title": "React",
+              "icon": "skill-icons:react-light",
+              "color": "#61DAFB"
+            },
+            {
+              "title": "TypeScript",
+              "icon": "skill-icons:typescript",
+              "color": "#3178c6"
+            },
+            {
+              "title": "Docker",
+              "icon": "skill-icons:docker",
+              "color": "#2496ED"
+            }
+          ]
+        },
+        {
+          "title": "Calculadora Agrosolar",
+          "description": "Aplicación fullstack para cálculos de eficiencia en instalaciones de paneles solares para agricultura. API REST con Django y frontend interactivo con Vue.js.",
+          "image": "/assets/img/projects/agrosolar.webp",
+          "url": "",
+          "repo": "",
+          "privateProject": true,
+          "technologies": [
+            {
+              "title": "Django",
+              "icon": "skill-icons:django",
+              "color": "#092E20"
+            },
+            {
+              "title": "Vue.js",
+              "icon": "skill-icons:vuejs-light",
+              "color": "#42b883"
+            },
+            {
+              "title": "TypeScript",
+              "icon": "skill-icons:typescript",
+              "color": "#3178c6"
+            },
+            {
+              "title": "Python",
+              "icon": "skill-icons:python-light",
+              "color": "#3776AB"
+            }
+          ]
+        },
         {
           "title": "Rawg Api",
           "description": "Prueba técnica realizada para el cargo de Desarrollador Frontend, utilizando la API de Rawg.io para mostrar información de videojuegos.",
@@ -88,9 +208,9 @@
           ]
         },
         {
-          "title": "Mi Portafolio",
-          "description": "Mi portafolio web hecho con Vue.js, alojado en VPS con Nginx y Docker.",
-          "image": "/assets/img/projects/portfolio.webp",
+          "title": "TinySA CSV to WWB",
+          "description": "Aplicación web para convertir archivos CSV generados por el analizador de espectro TinySA al formato compatible con uno de los softwares lider de la industria de radiofrecuencias, Wireless Workbench de SHURE.",
+          "image": "/assets/img/projects/tinySA-wwb.webp",
           "url": "https://cristianrojasdev.website",
           "repo": "https://github.com/MaverickLegend/portfolio",
           "technologies": [
@@ -105,24 +225,9 @@
               "color": "#3178c6"
             },
             {
-              "title": "Pinia",
-              "icon": "skill-icons:pinia-light",
-              "color": "#ffda44"
-            },
-            {
-              "title": "SCSS",
-              "icon": "skill-icons:sass",
-              "color": "#cc6699"
-            },
-            {
-              "title": "Docker",
-              "icon": "skill-icons:docker",
-              "color": "#2496ED"
-            },
-            {
-              "title": "Nginx",
-              "icon": "skill-icons:nginx",
-              "color": "#009639"
+              "title": "Rust",
+              "icon": "skill-icons:rust",
+              "color": "#000000"
             }
           ]
         }
@@ -163,16 +268,21 @@
       },
       {
         "id": 2,
+        "name": "Experiencia",
+        "url": "/experience"
+      },
+      {
+        "id": 3,
         "name": "Sobre mí",
         "url": "/about"
       },
       {
-        "id": 3,
+        "id": 4,
         "name": "Certificados",
         "url": "/certificates"
       },
       {
-        "id": 4,
+        "id": 5,
         "name": "Contacto",
         "url": "/contact"
       }

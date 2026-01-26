@@ -20,6 +20,8 @@ export interface ProjectItem {
   url: string;
   repo: string;
   technologies: Technology[];
+  status?: string;
+  privateProject?: boolean;
 }
 export interface Section {
   id: number;
@@ -49,10 +51,9 @@ export interface Presentation {
 
 export interface About {
   title: string;
-  intro: string;
+  intro?: string;
   description: string;
   highlights: string[];
-  quote: string;
   skills_table: {
     headers: [string, string];
     rows: [string, string][];
@@ -65,10 +66,27 @@ export interface Technology {
   color: string;
 }
 
+export interface ExperienceItem {
+  year: string;
+  company: string;
+  position: string;
+  type: string;
+  description: string;
+  technologies: string[];
+  achievements: string[];
+  status?: string;
+}
+
+export interface Experience {
+  title: string;
+  items: ExperienceItem[];
+}
+
 export interface Content {
   presentation: Presentation;
   about: About;
   certificates: Certificate[];
+  experience: Experience;
   projects: Projects;
   contact: Contact;
   sections: Section[];
