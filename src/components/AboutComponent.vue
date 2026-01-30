@@ -2,12 +2,12 @@
     <transition name="fade">
         <div class="about-container" :key="languageKey">
             <h1 class="section-title">{{ sectionTitle }}</h1>
-            <div class="about-top">
+            <div class="about-top" v-observe>
                 <h2 class="about-title">{{ about.title }}</h2>
                 <p class="about-intro">{{ about.intro }}</p>
                 <p class="about-description">{{ about.description }}</p>
             </div>
-            <div class="about-grid">
+            <div class="about-grid" v-observe>
                 <div class="about-left">
                     <h3 class="highlights-title">Highlights</h3>
                     <ul class="highlights-list">
@@ -18,21 +18,21 @@
                     </ul>
                 </div>
                 <div class="about-right">
-                    <div class="skills-section">
-                        <table class="skills-table">
-                            <thead>
-                                <tr>
-                                    <th v-for="header in about.skills_table.headers" :key="header">
-                                        {{ header }}
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="row in about.skills_table.rows" :key="row[0]">
-                                    <td v-for="cell in row" :key="cell">{{ cell }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="skills-grid">
+                        <div 
+                            class="skill-card" 
+                            v-for="skill in about.professional_skills" 
+                            :key="skill.title"
+                            :style="{ '--card-color': skill.color }"
+                        >
+                            <div class="card-icon">
+                                <Icon :icon="skill.icon" />
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">{{ skill.title }}</h4>
+                                <p class="card-desc">{{ skill.description }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,6 +43,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useLanguageStore } from '../stores/useLanguageStore'
+import { Icon } from '@iconify/vue';
 
 const store = useLanguageStore();
 const about = computed(() => store.about);
@@ -171,46 +172,62 @@ defineProps({
                 overflow: auto;
             }
 
-            .skills-section {
-                .skills-title {
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    color: var(--accent-teal, #4ecca3);
-                    margin-bottom: 1rem;
+           .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                padding-top: 1rem;
+                
+                @media(max-width: 600px) {
+                    grid-template-columns: 1fr;
                 }
 
-                .skills-table {
-                    width: 100%;
-                    border-collapse: separate;
-                    border-spacing: 0;
+                .skill-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+                    border-radius: 12px;
+                    padding: 1rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    transition: all 0.3s ease;
+                    position: relative;
+                    overflow: hidden;
 
-                    th,
-                    td {
-                        padding: 0.5rem;
-                        text-align: left;
-                        font-size: 0.9rem;
+                    &:hover {
+                        transform: translateY(-2px);
+                         background: rgba(255, 255, 255, 0.06);
+                        border-color: var(--card-color);
+                        box-shadow: 0 0 15px var(--card-color);
+                        
+                        .card-icon {
+                            color: var(--card-color);
+                            filter: drop-shadow(0 0 5px var(--card-color));
+                        }
                     }
 
-                    th {
-                        background-color: rgba(65, 65, 65, 0.3);
-                        color: var(--accent-teal, #4ecca3);
-                        font-weight: 500;
-                        letter-spacing: 1px;
-                        border-bottom: 1px solid var(--accent-teal, #4ecca3);
+                    .card-icon {
+                        font-size: 2rem;
+                        color: rgba(255, 255, 255, 0.7);
+                        transition: all 0.3s ease;
+                        display: flex;
+                        align-items: center;
                     }
 
-                    tr:nth-child(even) {
-                        background-color: rgba(65, 65, 65, 0.15);
-                    }
+                    .card-content {
+                        .card-title {
+                            font-size: 0.95rem;
+                            font-weight: 600;
+                            color: var(--text-primary);
+                            margin-bottom: 0.2rem;
+                        }
 
-                    td:first-child {
-                        font-weight: 500;
-                        color: var(--accent-purple, #a781ff);
-                    }
-
-                    td:last-child {
-                        color: var(--accent-blue, #61dafb);
-                        font-style: italic;
+                        .card-desc {
+                            font-size: 0.8rem;
+                            color: rgba(255, 255, 255, 0.6);
+                            line-height: 1.3;
+                            font-style: italic;
+                        }
                     }
                 }
             }
@@ -249,15 +266,6 @@ defineProps({
 
     .about-title {
         font-size: 1.3rem;
-    }
-
-    .skills-table {
-        font-size: 0.85rem;
-
-        th,
-        td {
-            padding: 0.5rem;
-        }
     }
 
     .about-quote {

@@ -36,26 +36,71 @@
         "Continuous learning and technical curiosity",
         "Ability to adapt to new technologies and environments"
       ],
-      "skills_table": {
-        "headers": ["Skill", "Experience"],
-        "rows": [
-          [
-            "Problem-solving under dynamic and emergent situations",
-            "3 years in live events"
-          ],
-          ["Technical detail", "Code and system optimization"],
-          ["Clear communication", "From the stage to development"]
-        ]
-      }
+      "professional_skills": [
+        {
+          "title": "Technical Detail",
+          "description": "Code and system optimization",
+          "icon": "lucide:cpu",
+          "color": "#64E0B9"
+        },
+        {
+          "title": "Clear Communication",
+          "description": "From the stage to development",
+          "icon": "lucide:mic",
+          "color": "#7CB4DD"
+        },
+        {
+          "title": "Effective Collaboration",
+          "description": "Multidisciplinary team work",
+          "icon": "lucide:users",
+          "color": "#9B8AD4"
+        },
+        {
+          "title": "Problem Solving",
+          "description": "Debugging and code optimization",
+          "icon": "lucide:puzzle",
+          "color": "#F05032"
+        },
+        {
+          "title": "Adaptability",
+          "description": "Working under dynamic situations",
+          "icon": "lucide:zap",
+          "color": "#FCC624"
+        }
+      ]
     },
     "skills": {
-      "title": "Skills"
+      "title": "Skills",
+      "items": [
+        { "title": "JavaScript", "color": "#F7DF1E", "icon": "skill-icons:javascript" },
+        { "title": "TypeScript", "color": "#3178C6", "icon": "skill-icons:typescript" },
+        { "title": "Vue.js", "color": "#42B883", "icon": "skill-icons:vuejs-dark" },
+        { "title": "React", "color": "#61DAFB", "icon": "skill-icons:react-dark" },
+        { "title": "Node.js", "color": "#339933", "icon": "skill-icons:nodejs-dark" },
+        { "title": "Express", "color": "#000000", "icon": "skill-icons:expressjs-dark" },
+        { "title": "NestJS", "color": "#E0234E", "icon": "skill-icons:nestjs-dark" },
+        { "title": "HTML", "color": "#E34F26", "icon": "skill-icons:html" },
+        { "title": "CSS", "color": "#1572B6", "icon": "skill-icons:css" },
+        { "title": "Sass", "color": "#CC6699", "icon": "skill-icons:sass" },
+        { "title": "Tailwind CSS", "color": "#38B2AC", "icon": "skill-icons:tailwindcss-dark" },
+        { "title": "Bootstrap", "color": "#563D7C", "icon": "skill-icons:bootstrap" },
+        { "title": "PostgreSQL", "color": "#336791", "icon": "skill-icons:postgresql-dark" },
+        { "title": "MySQL", "color": "#4479A1", "icon": "skill-icons:mysql-dark" },
+        { "title": "MongoDB", "color": "#47A248", "icon": "skill-icons:mongodb" },
+        { "title": "Git", "color": "#F05032", "icon": "skill-icons:git" },
+        { "title": "Docker", "color": "#2496ED", "icon": "skill-icons:docker" },
+        { "title": "Postman", "color": "#FF6C37", "icon": "skill-icons:postman" },
+        { "title": "Jest", "color": "#C21325", "icon": "skill-icons:jest" },
+        { "title": "C#", "color": "#68217a", "icon": "skill-icons:cs" },
+        { "title": "Linux", "color": "#FCC624", "icon": "skill-icons:linux-dark" },
+        { "title": "Pinia", "color": "#EAB308", "icon": "skill-icons:pinia-dark" }
+      ]
     },
     "experience": {
       "title": "Experience",
       "items": [
         {
-          "year": "2025",
+          "year": "2024 - Present",
           "company": "GigLogic",
           "position": "FullStack Developer",
           "type": "Personal Project",
@@ -75,7 +120,7 @@
           "status": "In Development"
         },
         {
-          "year": "2025",
+          "year": "2025 - Present",
           "company": "LatLong",
           "position": "Freelance Developer",
           "type": "Freelance",
@@ -104,7 +149,7 @@
           ]
         },
         {
-          "year": "2021 - 2024",
+          "year": "2021 - Present",
           "company": "Live Events",
           "position": "Audio and Video Technician",
           "type": "Freelance",
@@ -122,28 +167,31 @@
       "title": "Projects",
       "viewProject": "View project",
       "viewCode": "View code",
+      "viewDemo": "View Demo",
       "items": [
         {
           "title": "GigLogic",
           "description": "SaaS designed to optimize logistics and production in the large-scale events industry. Comprehensive inventory management system, schedules and resources.",
-          "image": "/assets/img/projects/tinySA-wwb.png",
+          "imageFolder": "giglogic",
+          "imageCount": 1,
           "url": "",
           "repo": "",
+          "demo": "https://giglogic-demo.vercel.app",
           "status": "🚀 In Development",
           "technologies": [
             {
               "title": "NestJS",
-              "icon": "skill-icons:nestjs-light",
+              "icon": "skill-icons:nestjs-dark",
               "color": "#E0234E"
             },
             {
               "title": "PostgreSQL",
-              "icon": "skill-icons:postgresql-light",
+              "icon": "skill-icons:postgresql-dark",
               "color": "#336791"
             },
             {
               "title": "React",
-              "icon": "skill-icons:react-light",
+              "icon": "skill-icons:react-dark",
               "color": "#61DAFB"
             },
             {
@@ -155,13 +203,19 @@
               "title": "Docker",
               "icon": "skill-icons:docker",
               "color": "#2496ED"
+            },
+            {
+              "title": "Tailwind CSS",
+              "icon": "skill-icons:tailwindcss-dark",
+              "color": "#38B2AC"
             }
           ]
         },
         {
           "title": "Agro-Solar Calculator",
           "description": "Fullstack application for efficiency calculations in solar panel installations for agriculture. REST API with Django and interactive frontend with Vue.js.",
-          "image": "/assets/img/projects/tinySA-wwb.png",
+          "imageFolder": "agrovoltaic",
+          "imageCount": 11,
           "url": "",
           "repo": "",
           "privateProject": true,
@@ -173,7 +227,7 @@
             },
             {
               "title": "Vue.js",
-              "icon": "skill-icons:vuejs-light",
+              "icon": "skill-icons:vuejs-dark",
               "color": "#42b883"
             },
             {
@@ -183,21 +237,47 @@
             },
             {
               "title": "Python",
-              "icon": "skill-icons:python-light",
+              "icon": "skill-icons:python-dark",
               "color": "#3776AB"
+            }
+          ]
+        },
+        {
+          "title": "TinySA CSV to WWB",
+          "description": "Web application to convert CSV files generated by the TinySA spectrum analyzer to a format compatible with Wireless Workbench by SHURE, one of the leading software in the radio frequency industry. Specialized tool for audio technicians in RF spectrum management.",
+          "imageFolder": "tinysa-wwb",
+          "imageCount": 1,
+          "url": "https://cristianrojasdev.website",
+          "repo": "https://github.com/MaverickLegend/portfolio",
+          "technologies": [
+            {
+              "title": "Vue.js",
+              "icon": "skill-icons:vuejs-dark",
+              "color": "#42b883"
+            },
+            {
+              "title": "TypeScript",
+              "icon": "skill-icons:typescript",
+              "color": "#3178c6"
+            },
+            {
+              "title": "Rust",
+              "icon": "skill-icons:rust",
+              "color": "#000000"
             }
           ]
         },
         {
           "title": "Rawg Api",
           "description": "A technical test for frontend job consisting in a web application that consumes the Rawg API to display a list of games and their details.",
-          "image": "/assets/img/projects/rawgapi.webp",
+          "imageFolder": "rawgapi",
+          "imageCount": 2,
           "url": "https://rawg-api-tt.vercel.app",
           "repo": "https://github.com/MaverickLegend/rawg-api-tt",
           "technologies": [
             {
               "title": "React",
-              "icon": "skill-icons:react-light",
+              "icon": "skill-icons:react-dark",
               "color": "#61DAFB"
             },
             {
@@ -212,7 +292,7 @@
             },
             {
               "title": "Tailwind CSS",
-              "icon": "skill-icons:tailwindcss-light",
+              "icon": "skill-icons:tailwindcss-dark",
               "color": "#38B2AC"
             },
             {
@@ -221,35 +301,11 @@
               "color": "#FBBF24"
             }
           ]
-        },
-        {
-          "title": "TinySA CSV to WWB",
-          "description": "Web application to convert CSV files generated by the TinySA spectrum analyzer to a format compatible with Wireless Workbench by SHURE, one of the leading software in the radio frequency industry. Specialized tool for audio technicians in RF spectrum management.",
-          "image": "/assets/img/projects/tinySA-wwb.webp",
-          "url": "https://cristianrojasdev.website",
-          "repo": "https://github.com/MaverickLegend/portfolio",
-          "technologies": [
-            {
-              "title": "Vue.js",
-              "icon": "skill-icons:vuejs-light",
-              "color": "#42b883"
-            },
-            {
-              "title": "TypeScript",
-              "icon": "skill-icons:typescript",
-              "color": "#3178c6"
-            },
-            {
-              "title": "Rust",
-              "icon": "skill-icons:rust",
-              "color": "#000000"
-            }
-          ]
         }
       ]
     },
     "contact": {
-      "title": "On development",
+      "title": "In development",
       "contactForm": [
         {
           "id": "name",

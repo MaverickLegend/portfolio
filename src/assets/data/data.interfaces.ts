@@ -10,15 +10,18 @@ export interface Projects {
   title: string;
   viewProject: string;
   viewCode: string;
+  viewDemo: string;
   items: ProjectItem[];
 }
 
 export interface ProjectItem {
   title: string;
   description: string;
-  image: string;
+  imageFolder: string;
+  imageCount: number;
   url: string;
   repo: string;
+  demo?: string;
   technologies: Technology[];
   status?: string;
   privateProject?: boolean;
@@ -49,15 +52,19 @@ export interface Presentation {
   webdeveloper: string;
 }
 
+export interface ProfessionalSkill {
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+}
+
 export interface About {
   title: string;
   intro?: string;
   description: string;
   highlights: string[];
-  skills_table: {
-    headers: [string, string];
-    rows: [string, string][];
-  };
+  professional_skills: ProfessionalSkill[];
 }
 
 export interface Technology {
@@ -92,6 +99,7 @@ export interface Content {
   sections: Section[];
   skills: {
     title: string;
+    items: Technology[];
   };
   settings: {
     darkmode: string;

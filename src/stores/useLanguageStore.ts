@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import en from "../assets/data/english.json";
 import es from "../assets/data/spanish.json";
 import type { Language } from "../assets/data/data.interfaces";
+import { generateProjectImages } from "../utils/imageUtils";
 
 export const useLanguageStore = defineStore("language", {
   state: () => ({
@@ -15,7 +16,11 @@ export const useLanguageStore = defineStore("language", {
     content: (state) => state.current.content,
     presentation: (state) => state.current.content.presentation,
     sections: (state) => state.current.content.sections,
-    projects: (state) => state.current.content.projects.items,
+    projects: (state) => 
+      state.current.content.projects.items.map(project => ({
+        ...project,
+        images: generateProjectImages(project.imageFolder, project.imageCount)
+      })),
     certificates: (state) => state.current.content.certificates,
     skills: (state) => state.current.content.skills,
     about: (state) => state.current.content.about,

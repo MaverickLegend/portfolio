@@ -46,31 +46,13 @@ defineProps({
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 1rem; // Reduced left padding
         position: relative;
-        max-width: 800px; // Limit width for better readability on large screens
+        width: 100%; // Ensure it takes full width
 
         @media (max-width: 900px) {
             padding: 0.5rem 0.5rem 0.5rem 1rem;
             gap: 1rem;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0.5rem;
-            top: 0.5rem;
-            bottom: 0.5rem;
-            width: 2px;
-            background: linear-gradient(
-                to bottom,
-                var(--accent-purple),
-                var(--accent-blue)
-            );
-
-            @media (max-width: 900px) {
-                left: 0.25rem;
-            }
         }
     }
 }
