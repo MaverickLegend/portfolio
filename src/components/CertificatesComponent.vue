@@ -5,7 +5,7 @@
             <div class="certificate-container">
                 <div class="certificate" v-for="certificate in certificates" :key="certificate.title">
                     <div class="left-container">
-                        <a :href="certificate.link" target="_blank">
+                        <a :href="certificate.link" target="_blank" rel="noopener noreferrer">
                             <picture>
                                 <source :srcset="certificate.image" type="image/webp" loading="lazy" />
                                 <img :src="certificate.image" :alt="certificate.title" loading="lazy" />

@@ -9,7 +9,7 @@
       "hello": "Hello, I am",
       "name": "Cristián Rojas",
       "alias": "MaverickLegend",
-      "webdeveloper": "Fullstack developer"
+      "webdeveloper": "Software Analyst - FullStack Developer"
     },
     "certificates": [
       {
@@ -29,7 +29,7 @@
     ],
     "about": {
       "title": "Software Developer & Sound Technician",
-      "description": "FullStack Developer specialized in the TypeScript ecosystem, with solid experience building scalable applications with NestJS on the backend and modern architectures in Vue.js and React. Focused on delivering clean and typed code, with demonstrated ability to optimize complex processes and solve business problems under pressure. Building digital solutions with the same precision I use to tune sound and video systems; attention to detail, detecting noise, and delivering flawless experiences. Since I was very young, I have been fascinated by technology and its creative aspects, from the artistic complexity of a video game to the smallest instruction of an electronic device. I feel comfortable solving problems and learning new technologies, always looking to deepen my knowledge, improve my skills, and strengthen mutual support within the team.",
+      "description": "FullStack Developer specialized in the TypeScript ecosystem, with solid experience building scalable applications with NestJS on the backend and modern architectures in Vue.js and React. Focused on delivering clean and typed code, with demonstrated ability to optimize complex processes and solve business problems under pressure. Building digital solutions with the same precision I use to tune sound and video systems; attention to detail, detecting noise, and delivering flawless experiences. Technical degree in Programming and Systems Analysis, currently studying Computer Science and Informatics Engineering, continuing my professional development and deepening knowledge in software architecture and complex systems. Since I was very young, I have been fascinated by technology and its creative aspects, from the artistic complexity of a video game to the smallest instruction of an electronic device. I feel comfortable solving problems and learning new technologies, always looking to deepen my knowledge, improve my skills, and strengthen mutual support within the team.",
       "highlights": [
         "Problem-solving under dynamic and emergent situations",
         "Effective collaboration in multidisciplinary teams",
@@ -173,10 +173,10 @@
           "title": "GigLogic",
           "description": "SaaS designed to optimize logistics and production in the large-scale events industry. Comprehensive inventory management system, schedules and resources.",
           "imageFolder": "giglogic",
-          "imageCount": 1,
+          "imageCount": 5,
           "url": "",
           "repo": "",
-          "demo": "https://giglogic-demo.vercel.app",
+          "demo": "",
           "status": "🚀 In Development",
           "technologies": [
             {
@@ -351,11 +351,6 @@
         "id": 4,
         "name": "Certificates",
         "url": "/certificates"
-      },
-      {
-        "id": 5,
-        "name": "Contact",
-        "url": "/contact"
       }
     ],
     "settings": {

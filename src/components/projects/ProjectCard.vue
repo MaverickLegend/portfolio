@@ -1,6 +1,6 @@
 <template>
     <div class="project-card">
-        <div class="project-image" @click="$emit('openModal', 0)">
+        <div class="project-image" @click="$emit('openModal', 0)" v-if="project.images && project.images.length > 0">
             <picture>
                 <source
                     :srcset="project.images[0]"
@@ -56,6 +56,7 @@
                     v-if="project.url"
                     :href="project.url"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="project-link"
                 >
                     <Icon
@@ -68,6 +69,7 @@
                     v-if="project.repo"
                     :href="project.repo"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="project-link"
                 >
                     <Icon
@@ -80,6 +82,7 @@
                     v-if="project.demo"
                     :href="project.demo"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="project-link demo-link"
                 >
                     <Icon

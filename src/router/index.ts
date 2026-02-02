@@ -21,14 +21,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../components/ExperienceComponent.vue"),
   },
   {
-    path: "/contact",
-    name: "Contact",
-    component: () => import("../components/ContactComponent.vue"),
-  },
-  {
     path: "/projects",
     name: "Projects",
     component: () => import("../components/projects/ProjectsComponent.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: () => import("../components/NotFoundComponent.vue"),
   },
 ];
 

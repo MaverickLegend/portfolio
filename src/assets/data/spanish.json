@@ -9,7 +9,7 @@
       "hello": "Hola, soy",
       "name": "Cristián Rojas",
       "alias": "MaverickLegend",
-      "webdeveloper": "Desarrollador web Fullstack"
+      "webdeveloper": "Analista Programador - Desarrollador FullStack"
     },
     "certificates": [
       {
@@ -29,7 +29,7 @@
     ],
     "about": {
       "title": "Desarrollador de Software & Técnico en Sonido",
-      "description": "Desarrollador FullStack especializado en el ecosistema TypeScript, con experiencia sólida construyendo aplicaciones escalables con NestJS en el backend y arquitecturas modernas en Vue.js y React. Enfocado en la entrega de código limpio y tipado, con capacidad demostrada para optimizar procesos complejos y resolver problemas de negocio bajo presión. Construyo soluciones digitales con la misma precisión con que afino sistemas de sonido y video; atención al detalle, detectando ruido y entregando experiencias impecables. Desde muy pequeño me vi encantado con la tecnología y su ámbito creativo, desde la complejidad artística que significa un videojuego hasta la más mínima instrucción de un aparato electrónico. Me siento cómodo resolviendo problemas y aprendiendo nuevas tecnologías, siempre buscando profundizar mis conocimientos, mejorar mis habilidades y fortalecer el apoyo mutuo en el equipo de trabajo.",
+      "description": "Desarrollador FullStack especializado en el ecosistema TypeScript, con experiencia sólida construyendo aplicaciones escalables con NestJS en el backend y arquitecturas modernas en Vue.js y React. Enfocado en la entrega de código limpio y tipado, con capacidad demostrada para optimizar procesos complejos y resolver problemas de negocio bajo presión. Construyo soluciones digitales con la misma precisión con que afino sistemas de sonido y video; atención al detalle, detectando ruido y entregando experiencias impecables. Técnico titulado en Programación y Análisis de Sistemas, actualmente cursando Ingeniería en Computación e Informática, continuando mi desarrollo profesional y profundizando conocimientos en arquitectura de software y sistemas complejos. Desde muy pequeño me vi encantado con la tecnología y su ámbito creativo, desde la complejidad artística que significa un videojuego hasta la más mínima instrucción de un aparato electrónico. Me siento cómodo resolviendo problemas y aprendiendo nuevas tecnologías, siempre buscando profundizar mis conocimientos, mejorar mis habilidades y fortalecer el apoyo mutuo en el equipo de trabajo.",
       "highlights": [
         "Resolución de problemas bajo situaciones dinámicas y emergentes",
         "Colaboración efectiva en equipos multidisciplinarios",
@@ -161,10 +161,10 @@
           "title": "GigLogic",
           "description": "SaaS diseñado para optimizar la logística y producción en la industria de eventos a gran escala. Sistema integral de gestión de inventario, cronogramas y recursos.",
           "imageFolder": "giglogic",
-          "imageCount": 1,
+          "imageCount": 5,
           "url": "",
           "repo": "",
-          "demo": "https://giglogic-demo.vercel.app",
+          "demo": "",
           "status": "🚀 En Desarrollo",
           "technologies": [
             {
@@ -339,11 +339,6 @@
         "id": 4,
         "name": "Certificados",
         "url": "/certificates"
-      },
-      {
-        "id": 5,
-        "name": "Contacto",
-        "url": "/contact"
       }
     ],
     "settings": {

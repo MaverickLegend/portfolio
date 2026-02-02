@@ -174,9 +174,13 @@ defineProps({
 
            .skills-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 1rem;
-                padding-top: 1rem;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 0.75rem;
+                padding: 0.75rem;
+                
+                @media(max-width: 1200px) {
+                    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                }
                 
                 @media(max-width: 600px) {
                     grid-template-columns: 1fr;
@@ -185,11 +189,13 @@ defineProps({
                 .skill-card {
                     background: rgba(255, 255, 255, 0.03);
                     border: 1px solid rgba(255, 255, 255, 0.05);
-                    border-radius: 12px;
-                    padding: 1rem;
+                    border-radius: 10px;
+                    padding: 0.75rem;
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    gap: 1rem;
+                    text-align: center;
+                    gap: 0.5rem;
                     transition: all 0.3s ease;
                     position: relative;
                     overflow: hidden;
@@ -207,7 +213,7 @@ defineProps({
                     }
 
                     .card-icon {
-                        font-size: 2rem;
+                        font-size: 1.75rem;
                         color: rgba(255, 255, 255, 0.7);
                         transition: all 0.3s ease;
                         display: flex;
@@ -216,16 +222,16 @@ defineProps({
 
                     .card-content {
                         .card-title {
-                            font-size: 0.95rem;
+                            font-size: 0.85rem;
                             font-weight: 600;
                             color: var(--text-primary);
-                            margin-bottom: 0.2rem;
+                            margin-bottom: 0.25rem;
                         }
 
                         .card-desc {
-                            font-size: 0.8rem;
+                            font-size: 0.7rem;
                             color: rgba(255, 255, 255, 0.6);
-                            line-height: 1.3;
+                            line-height: 1.2;
                             font-style: italic;
                         }
                     }

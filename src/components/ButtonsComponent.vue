@@ -2,7 +2,7 @@
     <div class="container">
         <div class="icon-container">
             <div class="icon">
-                <a v-for="icon in icons" :key="icon.name" :href="icon.link" target="_blank"
+                <a v-for="icon in icons" :key="icon.name" :href="icon.link" target="_blank" rel="noopener noreferrer"
                     :class="icon.name.toLowerCase()" @click.prevent="handleLink(icon.link)">
                     <i :class="icon.icon"></i>
                 </a>
@@ -54,7 +54,7 @@ interface Icon {
 
 const icons = computed<Icon[]>(() => [
     { name: 'Github', icon: 'github fa-brands fa-github fa-xl', link: 'https://github.com/MaverickLegend' },
-    // { name: 'Gmail', icon: 'gmail fa-solid fa-square-envelope fa-xl', link: 'mailto:malcolmrojas.f@gmail.com' },
+    { name: 'Gmail', icon: 'gmail fa-solid fa-square-envelope fa-xl', link: 'mailto:malcolmrojas.f@gmail.com' },
     { name: 'LinkedIn', icon: 'fa-brands fa-linkedin fa-xl', link: 'https://www.linkedin.com/in/malcolmrojas/' },
     { name: 'CV', icon: 'fa-solid fa-file-pdf fa-xl', link: cv.value },
 ]);

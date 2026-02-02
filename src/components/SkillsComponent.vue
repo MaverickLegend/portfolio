@@ -1,9 +1,7 @@
 <template>
     <div class="skills-container">
         <transition name="disolve" mode="out-in">
-            <div class="title" :key="languageKey">
-                <h1 class="section-title">{{ skillsTitle.toUpperCase() }}</h1>
-            </div>
+            <h1 class="section-title" :key="languageKey">{{ skillsTitle.toUpperCase() }}</h1>
         </transition>
         <div class="skills" v-observe>
             <div v-for="skill in skills" :key="skill.title" :title="skill.title">
@@ -32,13 +30,10 @@ const languageKey = computed(() => store.current.code);
     background-color: var(--primary);
     border-radius: 0.3rem;
     justify-content: center;
+    padding: 1rem;
 
     @media (max-width: 900px) {
         padding: 0.5rem;
-    }
-
-    .title {
-        padding-left: 1rem;
     }
 
     .skills {
@@ -52,6 +47,7 @@ const languageKey = computed(() => store.current.code);
 
         @media (max-width: 900px) {
             gap: 0.5rem;
+            padding: 0.5rem;
         }
 
         .skill {
